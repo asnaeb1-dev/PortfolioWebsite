@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import Typed from "typed.js";
 import { PersonalityList } from '../../../data/strings';
+import BackgroundParticles from '../../uicomponents/BackgroundParticles/BackgroundParticles';
+
+import MyPhoto from "./../../../assets/mypic.png";
 
 const IntroductionPage = () => {
 
@@ -35,11 +38,15 @@ const IntroductionPage = () => {
             <h1>I'm a</h1>
             <h1 ref={typedElementRef} className=' text-indigo-500'>Raha</h1>
           </span>
-        </div>
-        <div className=' flex-1'>
+          <div className='w-full'>
 
+          </div>
+        </div>
+        <div className=' flex-1 flex justify-center items-center'>
+          <img src={MyPhoto} className='lg:w-3/5' />
         </div>
       </div>
+      <BackgroundParticles />
     </>
   )
 }
