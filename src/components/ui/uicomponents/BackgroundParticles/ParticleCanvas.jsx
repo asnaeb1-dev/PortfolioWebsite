@@ -21,11 +21,32 @@ const ParticleCanvas = ({ parentRef }) => {
     };
 
     const handleResize = debounceResize(event => {
-        canvasRef.current.width = parentRef.current.offsetWidth;
-        canvasRef.current.height = parentRef.current.offsetHeight;
-        // for(let particle of particlesList.current) {
-        //     particle.updateResizePosition({ width: canvasRef.current.width, height: canvasRef.current.height })
-        // }
+        const canvas = canvasRef.current;
+        canvas.width = parentRef.current.offsetWidth;
+        canvas.height = parentRef.current.offsetHeight;
+        const context = canvas.getContext("2d");
+        const animate = () => {
+          context.clearRect(0, 0, canvas.width, canvas.height);
+          for (let i = 0; i < particlesList.current.length; i++) {
+            particlesList.current[i].updatePosition({ width: canvas.width, height: canvas.height });
+    
+            for (let j = i; j < particlesList.current.length; j++) {
+              const dx = particlesList.current[i].xCoord - particlesList.current[j].xCoord;
+              const dy = particlesList.current[i].yCoord - particlesList.current[j].yCoord;
+              const distance = Math.sqrt(dx * dx + dy * dy);
+              if (distance < 50) {
+                context.beginPath();
+                context.strokeStyle = particlesList.current[i].color;
+                context.lineWidth = particlesList.current[i].size / 10;
+                context.moveTo(particlesList.current[i].xCoord, particlesList.current[i].yCoord);
+                context.lineTo(particlesList.current[j].xCoord, particlesList.current[j].yCoord);
+                context.stroke();
+              }
+            }
+          }
+          requestAnimationFrame(animate);
+        };
+        animate()
     }, 100);
 
     useEffect(() => {
@@ -36,7 +57,7 @@ const ParticleCanvas = ({ parentRef }) => {
   
       
       const init = () => {
-        for (let i = 0; i < 700; i++) {
+        for (let i = 0; i < 400; i++) {
           const particle = new Particle(10, 2, canvas, context);
           particlesList.current.push(particle);
         }
