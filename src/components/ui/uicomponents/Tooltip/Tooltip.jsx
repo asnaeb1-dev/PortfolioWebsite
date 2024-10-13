@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./tooltip.css";
+import { TooltipContextRef } from '../../context/TooltipContext';
 
-const Tooltip = ({ tooltipTitle = "", toolTipMessage = "" }) => {
+const Tooltip = ({ location = {}, children }) => {
+  const { } = useContext(TooltipContextRef);
   return (
-    <div className='absolute z-30 tooltip bg-red-300/50 text-sm font-normal rounded-full p-2 px-4 top-10'>
-        <h1>{toolTipMessage}</h1>
+    <div className='fixed z-30 tooltip bg-red-300/50 text-sm font-normal rounded-full p-2 px-4 top-10'>
+        {children}
     </div>
   )
 }

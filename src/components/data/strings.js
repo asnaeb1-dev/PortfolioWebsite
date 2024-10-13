@@ -12,8 +12,8 @@ export const Links = {
     SKILLS: "/skills",
     PROJECTS: "/projects",
     EDUCATION: "/education",
-    CONTACT: "/contact",
     WORK_EXPERIENCE: "/work",
+    CONTACT: "/contact",
 };
 
 
@@ -25,3 +25,10 @@ export const PersonalityList = [
     "Gamer.",
     "Asnaeb"
 ]
+
+export const WelcomeMessages = [
+    "Hi! There",
+    "Welcome to my portfolio!",
+    "Hope you like my portfolio",
+    "Feel free to look around."
+];

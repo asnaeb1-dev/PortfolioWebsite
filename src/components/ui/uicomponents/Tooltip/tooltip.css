@@ -1,4 +1,4 @@
-.tooltip::after {
+/* .tooltip::after {
     content: "";
     position: absolute;
     bottom: 100%;
@@ -7,5 +7,5 @@
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: rgb(252 165 165) transparent transparent transparent;
-  }
+    border-color: rgb(129 140 248) transparent transparent transparent;
+  } */
