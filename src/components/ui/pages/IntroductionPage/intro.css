@@ -1,0 +1,47 @@
+
+.linkedin{
+    color: #0077B5;
+    transition: all 0.5s ease;
+    font-weight: bold;
+    border-color: #0077B5;
+}
+
+.linkedin:hover {
+    background-color: #0077B5;
+    color: white;
+    border-color: #0077B5;
+}
+
+
+.github{
+    color: #6e5494;
+    transition: all 0.5s ease;
+    font-weight: bold;
+    border-color: #6e5494;
+}
+
+.github:hover {
+    background-color: #6e5494;
+    color: white;
+    border-color: #6e5494;
+}
+
+.moving {
+    transition: transform 0.5s ease;
+}
+
+.moving:hover {
+    transform: scale(1.15);  /* Shadow grows on hover */
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -23%;
+    left: 20px;
+    /* transform: rotate(180deg); */
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(129 140 248) transparent transparent transparent;
+  }

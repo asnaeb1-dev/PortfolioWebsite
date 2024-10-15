@@ -1,0 +1,11 @@
+/* .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+    transform: rotate(180deg);
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(129 140 248) transparent transparent transparent;
+  } */
