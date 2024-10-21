@@ -16,12 +16,12 @@ const App = () => {
   return (
     <div className='w-full h-full'>
       <Navbar />
-      {
+      {/* {
         pageIndex < pagesList.length &&
         <Link to={pagesList[pageIndex]} onClick={() => setPageIndex(() => pageIndex <= pagesList.length ? pageIndex + 1 : 0)} title={"Move to next page"} className='fixed text-white hidden md:block  rounded-full p-2 bg-indigo-500 border-indigo-500 right-11 top-1/2 border-2 transition-all hover:translate-x-2'>
           <NextIcon size={40} />
         </Link>
-      }
+      } */}
       <Outlet />
     </div>
   )

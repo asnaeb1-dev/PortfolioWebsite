@@ -1,0 +1,35 @@
+.animateOpen {
+    animation: animOpen 1s ease forwards;
+}
+
+.animateClose {
+    animation: animClose 0.5s ease 0.5s forwards;
+}
+
+@keyframes animOpen {
+    from {
+        max-height: 60px;
+        opacity: 0;
+        padding: 0;
+        display: none;
+    }
+
+    to {
+        max-height: 300px;
+        opacity: 1;
+    }
+}
+
+@keyframes animClose {
+    from {
+        max-height: 300px;
+        opacity: 1;
+    }
+
+    to {
+        max-height: 0;
+        opacity: 0;
+        padding: 0;
+        display: none;
+    }
+}
