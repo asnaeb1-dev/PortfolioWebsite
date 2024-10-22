@@ -65,7 +65,7 @@ const IntroductionPage = () => {
 
   return (
     <>
-      <div className='h-[calc(100vh_-_80px)] flex flex-col-reverse lg:flex-row overflow-hidden'>
+      <div className='h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_80px)] flex flex-col-reverse lg:flex-row overflow-hidden linearGradient'>
         <div className='flex-1 flex flex-col justify-center items-center'>
           <h1 className='text-[25px] text-center md:text-[35px] lg:text-start lg:text-[50px] xl:text-[80px] font-extrabold w-3/5'>Hey! there,</h1>
           <span className=' justify-center lg:justify-start text-[22px] md:text-[30px] lg:text-[32px] xl:text-[40px] font-extrabold flex flex-row gap-2 w-3/5'>
@@ -85,11 +85,11 @@ const IntroductionPage = () => {
             </button>
           </div>
           <div className='w-full md:w-3/5 mt-5 flex justify-center lg:justify-start flex-row gap-3'>
-            <button className='border-2 rounded-full p-2 px-3 hover:px-5 flex flex-row gap-3 justify-between items-center github'>
+            <button className='border-2 rounded-full p-2 px-5 hover:px-7 flex flex-row gap-3 justify-between items-center github'>
               <GithubIcon size={20} />
               <p>GitHub</p>
             </button>
-            <button className='border-2  rounded-full hover:px-5 bg-white p-2 px-3 flex flex-row gap-3 justify-between items-center linkedin'>
+            <button className='border-2  rounded-full hover:px-5 p-2 px-3 flex flex-row gap-3 justify-between items-center linkedin'>
               <LinkedInIcon size={20} />
               <p>LinkedIn</p>
             </button>
