@@ -4,7 +4,7 @@ export const Skills = {
     title: "Skills",
     skillList: [
         {
-            skillType: "Programming Language",
+            skillType: "Programming Languages",
             skills: [
                 {
                     skillName: "JavaScript",
