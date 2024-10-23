@@ -140,3 +140,38 @@ export const Skills = {
         }
     ]
 };
+
+export const WorkExperience = {
+    title: "Work Experience",
+    workList: [
+        {
+            companyName: "ValueLabs LLP",
+            companyLink: "https://www.valuelabs.com/",
+            designation: "Software Engineer - Intern",
+            duration: "Jan, 2020 - Mar, 2020",
+            timeSpan: "3 months",
+            description: "I have been working on various projects and contributing to the development of various software systems. I have a strong foundation in JavaScript, React, and Node.js, as well as a strong background in web development and software architecture."
+        },{
+            companyName: "ValueLabs LLP",
+            companyLink: "https://www.valuelabs.com/",
+            designation: "Software Engineer",
+            duration: "June, 2020 - September, 2022",
+            timeSpan: "2 years 2 months",
+            description: "I have been working on various projects and contributing to the development of various frontend web applications. I have a strong foundation in JavaScript, React, and TypeScript, as well as a strong background in web development and software architecture."
+        },{
+            companyName: "Reputation",
+            companyLink: "https://reputation.com/",
+            designation: "Software Engineer - Frontend",
+            duration: "October, 2022 - June, 2023",
+            timeSpan: "8 months",
+            description: "I have been working on various projects and contributing to the development of various frontend web applications. I have a strong foundation in JavaScript, React, and TypeScript, as well as a strong background in web development and software architecture."
+        },{
+            companyName: "PragmaticPlay(Arrise Solutions Pvt. Ltd.)",
+            companyLink: "https://www.pragmaticplay.com/en/#",
+            designation: "SDE - Frontend",
+            duration: "July, 2023 - Currently working",
+            timeSpan: "1 year 3 months",
+            description: "I have been working on various projects and contributing to the development of various frontend web applications. I have a strong foundation in JavaScript, React, and TypeScript, as well as a strong background in web development and software architecture."
+        },
+    ]
+};

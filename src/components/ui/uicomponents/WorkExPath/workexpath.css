@@ -1,0 +1,14 @@
+.animateOffset {
+    animation: offsetAnim 1.05s ease infinite 0.1s forwards;
+}
+
+@keyframes offsetAnim {
+    from {
+        outline-offset: 0px;
+        outline-color: rgba(99, 102, 241, 1);
+    }
+    to {
+        outline-offset: 10px;
+        outline-color: rgba(236, 72, 153, 0);
+    }
+}
