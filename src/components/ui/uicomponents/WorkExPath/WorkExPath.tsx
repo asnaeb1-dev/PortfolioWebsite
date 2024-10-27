@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import "./workexpath.css";
 import WorkExpCard from './WorkExpCard';
 
-const WorkExPath = ({ workExperience = [] }) => {
+const WorkExPath = ({ workExperience = [], onclick }) => {
     const [currentPosition, setCurrentPosition] = useState(0);
     
     return (
@@ -17,6 +17,7 @@ const WorkExPath = ({ workExperience = [] }) => {
                                 end={index === workExperience.length - 1}
                                 isDone={() => setCurrentPosition(currentPosition + 1)}
                                 details={company}
+                                onclick={(index) => onclick(index)}
                             />
                         )
                     })
@@ -27,7 +28,7 @@ const WorkExPath = ({ workExperience = [] }) => {
     )
 }
 
-const IndividualWorkExPath = ({ begin = false, isDone, index = 0, end = false, details = {} }) => {
+const IndividualWorkExPath = ({ begin = false, isDone, onclick, index = 0, end = false, details }) => {
     const [start, setStart] = useState(false);
     const [isTransitionCompleted, setTransitionCompleted] = useState(false);
 
@@ -39,14 +40,15 @@ const IndividualWorkExPath = ({ begin = false, isDone, index = 0, end = false, d
 
     return (
         <div style={{ transform: `translateY(-${20 * index}px)` }} className={`flex flex-col relative items-center`}>
-            <span className={`w-8 h-8 relative top-3 ${start && "opacity-100"} opacity-0 rounded-full bg-indigo-500 ${!isTransitionCompleted && begin && "animateOffset outline outline-indigo-500" }`}></span>
-            { !end && <div onTransitionEnd={() => (setTransitionCompleted(true), isDone())} className={`w-3 ${start ? " h-52" : "h-0"} bg-indigo-500 rounded-full duration-[3000ms] transition-all`}></div>}
+            <span className={`w-4 h-4 hover:cursor-pointer hover:outline-2 hover:outline-indigo-500 relative top-3 shadow-xl ${start && "opacity-100"} opacity-0 rounded-full bg-indigo-500 ${!isTransitionCompleted && begin && "animateOffset outline outline-indigo-500" }`}></span>
+            { !end && <div onTransitionEnd={() => (setTransitionCompleted(true), isDone())} className={`w-1 ${start ? " h-52" : "h-0"} bg-indigo-500 rounded-full duration-[3000ms] transition-all`}></div>}
             <WorkExpCard
+                onclick={() => onclick(index)}
                 start={start}
                 workDetails={details}
                 index={index}
             />
-            <span className={`fixed w-56 opacity-0 top-1/2 ${start && "opacity-100"} ${index % 2 === 0 ? "left-[40px] text-start": "right-[40px] text-right"}`}>
+            <span className={`fixed font-bold w-56 opacity-0 top-1/2 ${start && "opacity-100"} ${index % 2 === 0 ? "left-[40px] text-start": "right-[40px] text-right"}`}>
                 {details?.timeSpan}
             </span>
         </div>

@@ -1,0 +1,13 @@
+.projectCard {
+    animation: fadeIn 1s forwards 300ms ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

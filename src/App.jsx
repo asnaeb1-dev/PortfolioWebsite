@@ -14,7 +14,7 @@ const App = () => {
   }, [pageIndex]);
 
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-full linearGradient'>
       <Navbar />
       {/* {
         pageIndex < pagesList.length &&

@@ -65,7 +65,7 @@ const IntroductionPage = () => {
 
   return (
     <>
-      <div className='h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_80px)] flex flex-col-reverse lg:flex-row overflow-hidden linearGradient'>
+      <div className='h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_80px)] flex flex-col-reverse lg:flex-row overflow-hidden'>
         <div className='flex-1 flex flex-col justify-center items-center'>
           <h1 className='text-[25px] text-center md:text-[35px] lg:text-start lg:text-[50px] xl:text-[80px] font-extrabold w-3/5'>Hey! there,</h1>
           <span className=' justify-center lg:justify-start text-[22px] md:text-[30px] lg:text-[32px] xl:text-[40px] font-extrabold flex flex-row gap-2 w-3/5'>

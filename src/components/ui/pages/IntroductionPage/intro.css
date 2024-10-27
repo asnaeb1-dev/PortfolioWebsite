@@ -26,10 +26,6 @@
     border-color: #6e5494;
 }
 
-.linearGradient {
-    background: linear-gradient(135deg, rgb(129, 140, 248, 0.4), rgba(255,0,0,0) 70.71%);
-}
-
 .moving {
     animation: bouncing 2s ease 0.1s infinite forwards;
 }   
