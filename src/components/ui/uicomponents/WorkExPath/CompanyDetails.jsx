@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useLayoutEffect, useState} from 'react';
 import {MdNavigateBefore as PreviousIcon, MdNavigateNext as NextIcon} from "react-icons/md";
 import ProjectCard from "./ProjectCard.jsx";
 
@@ -6,7 +6,7 @@ import ProjectCard from "./ProjectCard.jsx";
 const CompanyDetails = ({ companyDetails ={} }) => {
   const [currentProject, setCurrentProject] = useState(0);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setCurrentProject(0)
   }, [companyDetails]);
   return (

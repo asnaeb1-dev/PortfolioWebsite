@@ -1,4 +1,28 @@
-import { BootstapIcon, CSS3Icon, GitHubIcon, GitIcon, GitLabIcon, HTML5Icon, IntelliJIcon, JavaIcon, JavaScriptIcon, MaterialUIIcon, NodeJSIcon, NPMIcon, ReactIcon, ReactQueryIcon, ReactRouterDOMIcon, ReduxIcon, SublimeTextIcon, TailwindCSSIcon, TypeScriptIcon, ViteIcon, VSCodeIcon, WebpackIcon } from "./Icons";
+import {
+    BootstapIcon,
+    CSS3Icon,
+    GitHubIcon,
+    GitIcon,
+    GitLabIcon,
+    HTML5Icon,
+    IntelliJIcon,
+    JavaIcon,
+    JavaScriptIcon,
+    MaterialUIIcon,
+    NodeJSIcon,
+    NPMIcon,
+    ReactIcon,
+    ReactQueryIcon,
+    ReactRouterDOMIcon,
+    ReduxIcon,
+    SublimeTextIcon,
+    TailwindCSSIcon,
+    TypeScriptIcon,
+    ViteIcon,
+    VSCodeIcon,
+    WebpackIcon,
+    WebStormIcon
+} from "./Icons";
 
 export const Skills = {
     title: "Skills",
@@ -69,6 +93,11 @@ export const Skills = {
                     icon: IntelliJIcon,
                     progress: 65
                 },
+                {
+                    skillName: "WebStorm",
+                    icon: WebStormIcon,
+                    progress: 70
+                }
             ]
         }, {
             skillType: "Styling",
