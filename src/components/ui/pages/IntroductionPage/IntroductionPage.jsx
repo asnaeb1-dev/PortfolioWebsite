@@ -8,6 +8,7 @@ import { MdOutlineArrowCircleRight as RightArrow } from "react-icons/md";
 import { FaLinkedin as LinkedInIcon, FaGithubSquare as GithubIcon } from "react-icons/fa";
 
 import "./intro.css";
+import NameComponent from "../../uicomponents/NameComponent/NameComponent.jsx";
 
 const IntroductionPage = () => {
   const typedElementRef = useRef(null);
@@ -69,8 +70,9 @@ const IntroductionPage = () => {
         <div className='flex-1 flex flex-col justify-center items-center'>
           <h1 className='text-[25px] text-center md:text-[35px] lg:text-start lg:text-[50px] xl:text-[80px] font-extrabold w-3/5'>Hey! there,</h1>
           <span className=' justify-center lg:justify-start text-[22px] md:text-[30px] lg:text-[32px] xl:text-[40px] font-extrabold flex flex-row gap-2 w-3/5'>
-            <h1>I'm Abhigyan</h1>
-            <h1 className=' text-indigo-500'>Raha</h1>
+            <h1>I'm</h1>
+            <NameComponent nameText={"Abhigyan"} />
+            <h1>Raha</h1>
           </span>
           <span className='w-full justify-center lg:justify-start text-[16px] md:w-3/5 md:text-[20px] lg:text-[22px] mt-4 font-extrabold flex flex-row gap-2'>
             <h1>I'm a</h1>

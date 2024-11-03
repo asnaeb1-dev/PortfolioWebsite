@@ -7,6 +7,8 @@ export const NavBarStrings = {
     WORK_EXPERIENCE: "Work Experience",
 };
 
+export const API_LINKS = "https://alfa-leetcode-api.onrender.com/";
+
 export const Links = {
     INTRO: "/",
     SKILLS: "/skills",

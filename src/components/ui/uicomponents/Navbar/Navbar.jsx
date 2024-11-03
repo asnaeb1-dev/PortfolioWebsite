@@ -14,7 +14,7 @@ const Navbar = () => {
     const [isDarkModeEnabled, setDarkModeEnabled] = useState(false);
 
     return (
-        <div className=' bg-white shadow-xl px-8 lg:px-0 lg:rounded-full lg:translate-y-[20px] lg:m-auto h-16 lg:h-20 lg:w-4/5 flex flex-row justify-between lg:justify-around items-center'>
+        <div className=' bg-white shadow-xl px-8 py-2 lg:px-0 lg:rounded-full lg:translate-y-[20px] lg:m-auto h-16 lg:h-20 lg:w-4/5 flex flex-row justify-between lg:justify-around items-center'>
             <div className=' font-extrabold flex flex-row items-center text-indigo-500 gap-3'>
                 <img src={ProfilePicture} width={40} height={40} className=' object-cover aspect-square rounded-full cursor-pointer' />
                 <p className='hidden md:block md:text-xl xl:text-2xl'>Abhigyan Raha</p>
