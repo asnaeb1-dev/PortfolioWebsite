@@ -2,26 +2,26 @@ const LEET_CODE_USERNAME = "abhigyanrahawork76";
 const GFG_USERNAME = "asnaeb1";
 export const getLeetCodeProfileData = async () => {
   try {
-    const response = await fetch(`https://alfa-leetcode-api.onrender.com/userProfile/abhigyanrahawork76`);
+    const response = await fetch(`https://alfa-leetcode-api.onrend.com/userProfile/abhigyanrahawork76`);
     if (!response.ok) {
       throw new Error(`Error: ${response.status} ${response.statusText}`);
     }
     return await response.json();
   } catch (e) {
-    console.error("Failed to fetch LeetCode profile data:", e);
+    // console.error("Failed to fetch LeetCode profile data:", e);
     return {}; // Return an empty object or default data
   }
 }
 
 export const getGFGProfileData = async () => {
   try {
-    const response = await fetch(`https://geeks-for-geeks-stats-api.vercel.app/?raw=Y&userName=${GFG_USERNAME}`);
+    const response = await fetch(`https://geeks-for-geeks-stats-api.vcel.app/?raw=Y&userName=${GFG_USERNAME}`);
     if (!response.ok) {
       throw new Error(`Error: ${response.status} ${response.statusText}`);
     }
     return await response.json();
   } catch (e) {
-    console.error("Failed to fetch GFG profile data:", e);
+    // console.error("Failed to fetch GFG profile data:", e);
     return {}; // Return an empty object or default data
   }
 }

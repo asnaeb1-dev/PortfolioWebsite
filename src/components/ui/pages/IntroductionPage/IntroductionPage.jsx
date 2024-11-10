@@ -87,14 +87,24 @@ const IntroductionPage = () => {
             </button>
           </div>
           <div className='w-full md:w-3/5 mt-5 flex justify-center lg:justify-start flex-row gap-3'>
-            <button className='border-2 rounded-full p-2 px-5 hover:px-7 flex flex-row gap-3 justify-between items-center github'>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href='https://github.com/asnaeb1-dev'
+              className='border-2 rounded-full p-2 px-5 hover:px-7 flex flex-row gap-3 justify-between items-center github'
+            >
               <GithubIcon size={20} />
               <p>GitHub</p>
-            </button>
-            <button className='border-2  rounded-full hover:px-5 p-2 px-3 flex flex-row gap-3 justify-between items-center linkedin'>
+            </a>
+            <a
+              target="_blank"
+              rel="noopener noreferrer" 
+              href='https://www.linkedin.com/in/abhigyan-raha/' 
+              className='border-2  rounded-full hover:px-5 p-2 px-3 flex flex-row gap-3 justify-between items-center linkedin'
+            >
               <LinkedInIcon size={20} />
               <p>LinkedIn</p>
-            </button>
+            </a>
           </div>
         </div>
         <div className='flex-1 flex md:justify-center items-center'>

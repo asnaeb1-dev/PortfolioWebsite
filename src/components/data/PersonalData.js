@@ -24,6 +24,8 @@ import {
     WebStormIcon
 } from "./Icons";
 
+export const LeetCode_Link = `https://leetcode.com/u/abhigyanrahawork76/`;
+export const GFG_Link = "https://www.geeksforgeeks.org/user/asnaeb1/";
 export const Skills = {
     title: "Skills",
     skillList: [
