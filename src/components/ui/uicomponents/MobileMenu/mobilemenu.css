@@ -1,0 +1,16 @@
+.animateMobileMenuOpen {
+    animation: openMenu 0.5s ease-in-out forwards;
+}
+
+@keyframes openMenu {
+    from {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+
+    to {
+        width: 50vw;
+        height: 280px;
+    }
+}

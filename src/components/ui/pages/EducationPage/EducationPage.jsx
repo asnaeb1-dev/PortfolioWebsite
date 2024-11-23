@@ -1,8 +1,8 @@
-import React from 'react'
-
 const EducationPage = () => {
   return (
-    <div>EducationPage</div>
+    <div className={"w-full h-[calc(100vh_-_80px)] pt-6 overflow-hidden"}>
+
+    </div>
   )
 }
 

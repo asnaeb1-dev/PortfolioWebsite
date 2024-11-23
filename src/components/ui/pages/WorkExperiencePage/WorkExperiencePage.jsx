@@ -3,7 +3,7 @@ import WorkExPath from '../../uicomponents/WorkExPath/WorkExPath';
 import {WorkDetails, WorkExperience} from '../../../data/personalData';
 import CompanyDetails from "../../uicomponents/WorkExPath/CompanyDetails.jsx";
 const WorkExperiencePage = () => {
-  const [clickedWorkExperience, setClickedWorkExperience] = useState(-1);
+  const [clickedWorkExperience, setClickedWorkExperience] = useState(0);
 
   useEffect(() => {
     console.log(clickedWorkExperience);
@@ -14,11 +14,7 @@ const WorkExperiencePage = () => {
       <div className='flex flex-row flex-1 justify-center'>
         <WorkExPath workExperience={WorkExperience.workList} onclick={index => setClickedWorkExperience(index)} />
       </div>
-      {
-        clickedWorkExperience !== -1 ?
-          <CompanyDetails companyDetails={WorkDetails[clickedWorkExperience]} /> :
-          null
-      }
+      <CompanyDetails companyDetails={WorkDetails[clickedWorkExperience]} /> :
     </div>
   );
 };

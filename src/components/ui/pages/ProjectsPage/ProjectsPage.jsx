@@ -1,14 +1,16 @@
 import {FaGithub} from "react-icons/fa";
 import CodingCard from "../../uicomponents/CodingCard/CodingCard.jsx";
 import {getFromDB, getGFGProfileData, getLeetCodeProfileData, saveToDB} from "../../../data/api.js";
-import {useState, useEffect, useLayoutEffect} from "react";
+import {useState, useEffect} from "react";
 import {GeeksForGeeksIcon, LeetCodeIcon} from "../../../data/Icons.jsx";
-import {GFG_Link, LeetCode_Link} from "../../../data/PersonalData.js";
+import {GFG_Link, LeetCode_Link, Projects} from "../../../data/PersonalData.js";
+import TabLayout from "../../uicomponents/ProjectTabs/TabLayout.jsx";
+import ProjectItem from "../../uicomponents/ProjectItem/ProjectItem.jsx";
 
 const ProjectsPage = () => {
   const [gfgCodingProfileInfo, setGFGCodingProfileInfo] = useState({});
   const [leetcodeCodingProfileInfo, setLeetCodeCodingProfileInfo] = useState({});
-
+  const [currentProjectTopic, setCurerentProjectTopic] = useState(0);
   useEffect(() => {
     (async() => {
       const response = await getGFGProfileData();
@@ -24,6 +26,16 @@ const ProjectsPage = () => {
         setGFGCodingProfileInfo(data);
         saveToDB(data);
       } else {
+        const dbInstance = getFromDB("GeeksForGeeks");
+        if(Object.values(dbInstance)[0] === 0) {
+          saveToDB({
+            totalSolved: 543,
+            easySolved: 284,
+            mediumSolved: 232,
+            hardSolved: 27,
+            profile: "GeeksForGeeks"
+          });
+        }
         setGFGCodingProfileInfo(getFromDB("GeeksForGeeks"));
       }
     })()
@@ -43,13 +55,24 @@ const ProjectsPage = () => {
         setLeetCodeCodingProfileInfo(data);
         saveToDB(data);
       } else {
-        setLeetCodeCodingProfileInfo(getFromDB("LeetCode"))
+        const dbInstance = getFromDB("LeetCode");
+        if(Object.values(dbInstance)[0] !== 0) {
+          setLeetCodeCodingProfileInfo(dbInstance);
+        } else {
+          setLeetCodeCodingProfileInfo({
+            totalSolved: 233,
+            easySolved: 93,
+            mediumSolved: 125,
+            hardSolved: 15,
+            profile: "LeetCode"
+          })
+        }
       }
     })()
   }, []);
 
   return (
-    <div className={`w-full h-[calc(100vh_-_112px)] flex flex-col items-center mt-8 overflow-hidden`}>
+    <div className={`w-full h-[calc(100vh_-_95px)] lg:h-[calc(100vh_-_112px)] flex flex-col items-center mt-8`}>
       <div className={`w-4/5`}>
         <div className={`flex flex-row w-full justify-between items-center`}>
           <h1 className={"font-extrabold text-6xl"}>Coding</h1>
@@ -68,7 +91,19 @@ const ProjectsPage = () => {
           </CodingCard>
         </div>
       </div>
-
+      <div className={`w-4/5 mb-4`}>
+        <h1 className={"font-extrabold py-4 text-6xl"}>Projects</h1>
+        <div className={"w-full flex flex-col gap-4 p-4 h-[calc(100vh_-_600px)] overflow-hidden shadow-xl rounded-xl linearGradientReverse"}>
+          <TabLayout handleClick={(index) => setCurerentProjectTopic(index)} currentTopic={currentProjectTopic} tabList={["Frontend", "Backend", "Design"]} />
+          <div className={"grid h-full overflow-y-auto  overflow-x-hidden grid-cols-1 lg:grid-cols-2 gap-5"}>
+            {
+              Projects.map((projectItem, index) => {
+                return <ProjectItem key={index} prop={projectItem} />
+              })
+            }
+          </div>
+        </div>
+      </div>
     </div>
   )
 };
