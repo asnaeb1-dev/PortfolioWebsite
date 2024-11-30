@@ -20,7 +20,7 @@ const CodingCard = ({ codingData = {}, children, profile = "Coding Profile", lin
   }, [count, codingData?.totalSolved]);
 
   return (
-    <div className={`w-full shadow-xl h-[250px] flex flex-row bg-indigo-600/10 cursor-pointer rounded-3xl pb-4 pt-2 px-3 duration-500 transition-transform ${profile === "LeetCode" ? "origin-left" : "origin-right"} hover:scale-[102%]`}>
+    <div className={`w-full shadow-xl h-[250px] flex flex-row bg-indigo-600/10 cursor-pointer rounded-3xl pb-4 p-4 duration-500 transition-transform ${profile === "LeetCode" ? "origin-left" : "origin-right"} hover:scale-[102%]`}>
       {
         !codingData || !codingData.totalSolved || codingData.totalSolved === 0 ? <NoDataAvailable codingProfile={profile} icon={children} /> :
           (<>
@@ -84,7 +84,6 @@ const CodingCard = ({ codingData = {}, children, profile = "Coding Profile", lin
                 <div title={`Easy: ${easyQuestionSolved}%`} style={{'--bar-width': `${easyQuestionSolved}%`}}
                      className={`mt-auto rounded-r-lg h-8 flex items-center justify-center bg-emerald-400 animateProjectStats`}>
                   <p className={`text-sm text-black  relative lg:hidden`}>{codingData.easySolved}</p>
-
                 </div>
                 <div title={`Medium: ${mediumQuestionSolved}%`} style={{'--bar-width': `${mediumQuestionSolved}%` }}
                      className={`duration-500 flex justify-center items-center my-auto animateProjectStats transition-all w-0 delay-1000 rounded-r-lg h-8 bg-orange-400`}>

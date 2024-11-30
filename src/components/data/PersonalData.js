@@ -592,3 +592,9 @@ export const WorkDetails = [
     ]
   }
 ]
+
+export const AboutMeDescription = `Hey there! 👋 I’m a passionate software developer with 4 years of experience, specializing in web development. Over the years, I’ve had the opportunity to work with three amazing companies, where I honed my skills and developed a variety of web applications. Whether it’s crafting sleek UIs or solving complex coding challenges, I love bringing ideas to life on the web.
+
+Outside of work, I’m a gamer who’s always up for a good match and a coder who loves exploring new tech just for fun. I like to keep things lighthearted and believe that a mix of hard work, creativity, and a good sense of humor is the perfect recipe for success.
+
+If you’re here to connect, collaborate, or just check out my work, welcome to my portfolio! 😊`;

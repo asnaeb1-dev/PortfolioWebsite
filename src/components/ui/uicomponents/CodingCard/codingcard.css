@@ -1,6 +1,6 @@
 .animateProjectStats {
     --bar-width: 50%;
-    animation: widthAnim 0.3s ease-in-out forwards;
+    animation: widthAnim 0.7s ease-in-out forwards;
 }
 
 @keyframes widthAnim {
