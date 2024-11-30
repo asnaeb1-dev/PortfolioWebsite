@@ -10,11 +10,11 @@ const WorkExperiencePage = () => {
   }, [clickedWorkExperience]);
 
   return (
-    <div className='h-[calc(100vh_-_80px)] overflow-hidden px-4 pt-10 pb-4 flex flex-row justify-center'>
-      <div className='flex flex-row flex-1 justify-center'>
+    <div className='h-[calc(100vh_-_60px)] overflow-hidden px-4 pt-10 pb-4 flex flex-row justify-center'>
+      <div className='flex flex-row flex-1 overflow-hidden justify-center'>
         <WorkExPath workExperience={WorkExperience.workList} onclick={index => setClickedWorkExperience(index)} />
       </div>
-      <CompanyDetails companyDetails={WorkDetails[clickedWorkExperience]} /> :
+      {/*<CompanyDetails companyDetails={WorkDetails[clickedWorkExperience]} /> :*/}
     </div>
   );
 };

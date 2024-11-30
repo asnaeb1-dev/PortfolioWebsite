@@ -7,7 +7,7 @@ function MobileMenu({ isDarkModeEnabled = false, toggleSwitch, isMenuOpen = true
   const location = useLocation();
 
   return (
-    <div className={`absolute animateMobileMenuOpen transition-all overflow-hidden bg-white z-10 right-[6px] top-10 rounded-lg h-[280px]`}>
+    <div className={`absolute animateMobileMenuOpen transition-all overflow-hidden bg-white z-10 right-0 top-10 rounded-lg h-[280px]`}>
       <div className={`w-full flex flex-col gap-5 h-full linearGradientReverse p-2 rounded-lg border-2 border-indigo-500/40`}>
         <span className={`flex flex-row justify-between items-center text-sm`}>
           <p className={`text-indigo-500 font-bold`}>Dark Mode</p>

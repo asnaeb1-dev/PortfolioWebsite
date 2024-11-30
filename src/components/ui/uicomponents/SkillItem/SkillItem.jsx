@@ -13,7 +13,7 @@ const SkillItem = ({ children, progress = 0, skillTitle ="" }) => {
         }
       }, [count]);
     return (
-        <div className='flex flex-row bg-indigo-500/30 cursor-pointer hover:scale-[103%] hover:shadow-xl hover:bg-indigo-500/50 transition-transform duration-300 items-center p-3 gap-3 rounded-lg'>
+        <div className='flex flex-row bg-indigo-500/30 backdrop-blur-lg shadow-sm backdrop-saturate-150 cursor-pointer hover:scale-[103%] hover:shadow-xl hover:bg-indigo-500/50 transition-transform duration-300 items-center p-3 gap-3 rounded-lg'>
             <div>
                 {children}
             </div>
