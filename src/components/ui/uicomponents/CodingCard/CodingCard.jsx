@@ -91,7 +91,7 @@ const CodingCard = ({ codingData = {}, children, profile = "Coding Profile", lin
                 </div>
                 <div title={`Hard: ${hardQuestionSolved}%`} style={{'--bar-width': `${hardQuestionSolved}%`}}
                      className={`duration-500 flex items-center justify-center mb-auto animateProjectStats transition-all w-0 delay-1000 rounded-r-lg h-8 bg-red-500`}>
-                  <p className={`text-sm text-black relative left-[150%] lg:hidden`}>{codingData.easySolved}</p>
+                  <p className={`text-sm text-black relative left-[150%] lg:hidden`}>{codingData.hardSolved}</p>
                 </div>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import Typed from "typed.js";
 import { PersonalityList, WelcomeMessages } from '../../../data/strings';
 import BackgroundParticles from '../../uicomponents/BackgroundParticles/BackgroundParticles';

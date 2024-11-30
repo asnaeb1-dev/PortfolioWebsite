@@ -7,6 +7,8 @@ import {GFG_Link, LeetCode_Link, Projects} from "../../../data/PersonalData.js";
 import TabLayout from "../../uicomponents/ProjectTabs/TabLayout.jsx";
 import ProjectItem from "../../uicomponents/ProjectItem/ProjectItem.jsx";
 
+import { MdNavigateNext as NextProjectIcon } from "react-icons/md";
+
 const ProjectsPage = () => {
   const [gfgCodingProfileInfo, setGFGCodingProfileInfo] = useState({});
   const [leetcodeCodingProfileInfo, setLeetCodeCodingProfileInfo] = useState({});
@@ -83,11 +85,11 @@ const ProjectsPage = () => {
           <FaGithub size={20}/>
         </span>
       </span>
-      {
-        currentTab === 0 ?
-        <div className={`w-full lg:w-4/5 mt-2 overflow-y-auto`}>
+      <>
+        {/* coding tab */}
+        <div className={`w-full ${currentTab === 0 ? 'block' : 'hidden'} lg:block lg:w-4/5 mt-2 overflow-y-auto`}>
           <div className={` hidden lg:flex flex-row w-full justify-between items-center`}>
-            <h1 className={"font-extrabold text-4xl lg:text-6xl"}>Coding</h1>
+            <h1 className={"font-extrabold text-4xl lg:text-4xl"}>Coding</h1>
             <span title={"GitHub"}
               className={`p-2 rounded-full transition-all border-2 hover:scale-110 hover:text-white hover:bg-indigo-500 text-indigo-500 border-indigo-500 cursor-pointer `}
             >
@@ -102,21 +104,21 @@ const ProjectsPage = () => {
               {GeeksForGeeksIcon}
             </CodingCard>
           </div>
-        </div> :
-        <div className={`w-4/5 mb-4`}>
-        <h1 className={"font-extrabold py-4 text-6xl"}>Projects</h1>
-          <div className={"w-full flex flex-col gap-4 p-4 h-[calc(100vh_-_600px)] overflow-hidden shadow-xl rounded-xl linearGradientReverse"}>
-            <TabLayout handleClick={(index) => setCurerentProjectTopic(index)} currentTopic={currentProjectTopic} tabList={["Frontend", "Backend", "Design"]} />
+        </div>
+        {/* projects tab */}
+        <div className={`mb-4 w-full ${currentTab === 1 ? 'block' : 'hidden'} lg:block`}>
+          <h1 className={"font-extrabold py-4 hidden lg:block lg:text-4xl"}>Projects</h1>
+          <div className={"w-full flex flex-col gap-4 p-4 mt-4 h-[calc(100dvh_-_180px)] overflow-hidden backdrop-blur-sm backdrop-saturate-150 shadow-xl rounded-xl linearGradientReverse"}>
+            <span className={`flex flex-row justify-between items-center`}>
+              <TabLayout handleClick={(index) => setCurerentProjectTopic(index)} currentTopic={currentProjectTopic} tabList={["Frontend", "Backend", "Design"]} />
+             
+            </span>
             <div className={"grid h-full overflow-y-auto  overflow-x-hidden grid-cols-1 lg:grid-cols-2 gap-5"}>
-              {
-                Projects.map((projectItem, index) => {
-                  return <ProjectItem key={index} prop={projectItem} />
-                })
-              }
+              <ProjectItem key={0} prop={Projects[0]} />
             </div>
           </div>
         </div>
-      }
+      </>
     </div>
   )
 };
