@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import SkillsAccordian from '../../uicomponents/SkillsAccordian/SkillsAccordian'
-import { Skills } from '../../../data/personalData';
+import { Skills } from '../../../data/PersonalData';
 import GridSwitch from '../../uicomponents/GridSwitch/GridSwitch';
 import SkillPageGridView from './SkillPageGridView';
 
