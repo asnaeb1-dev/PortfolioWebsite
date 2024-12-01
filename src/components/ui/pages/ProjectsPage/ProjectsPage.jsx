@@ -113,8 +113,12 @@ const ProjectsPage = () => {
               <TabLayout handleClick={(index) => setCurerentProjectTopic(index)} currentTopic={currentProjectTopic} tabList={["Frontend", "Backend", "Design"]} />
              
             </span>
-            <div className={"grid h-full overflow-y-auto  overflow-x-hidden grid-cols-1 lg:grid-cols-2 gap-5"}>
-              <ProjectItem key={0} prop={Projects[0]} />
+            <div className={"grid h-full overflow-y-auto  overflow-x-hidden grid-cols-2 gap-1"}>
+              {
+                Projects.map((project, index) => (
+                  <ProjectItem key={index} prop={project} />
+                ))
+              }
             </div>
           </div>
         </div>

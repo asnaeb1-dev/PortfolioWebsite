@@ -8,8 +8,8 @@ import SkillsPage from '../SkillsPage/SkillsPage';
 import ProjectsPage from '../ProjectsPage/ProjectsPage';
 import EducationPage from "../EducationPage/EducationPage";
 import WorkExperiencePage from "../WorkExperiencePage/WorkExperiencePage";
-import ContactPage from "../ContactPage/ContactPage";
 import { Links } from '../../../data/strings';
+import ResumePage from '../ResumePage/ResumePage';
 
 const Router = () => {
 
@@ -24,7 +24,7 @@ const Router = () => {
                 { path: Links.PROJECTS, element: <ProjectsPage /> },
                 { path: Links.EDUCATION, element: <EducationPage /> },
                 { path: Links.WORK_EXPERIENCE, element: <WorkExperiencePage /> },
-                { path: Links.CONTACT, element: <ContactPage /> }
+                { path: Links.RESUME, element: <ResumePage /> }
             ]
         }
     ]);

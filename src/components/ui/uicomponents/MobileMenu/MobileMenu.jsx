@@ -22,7 +22,7 @@ function MobileMenu({ isDarkModeEnabled = false, toggleSwitch, isMenuOpen = true
           <Link to={Links.PROJECTS} className={`cursor-pointer transition-transform ${location.pathname === Links.PROJECTS ? 'translate-x-3 text-indigo-500 font-bold' : 'translate-x-0'} `}>{NavBarStrings.PROJECTS}</Link>
           <Link to={Links.EDUCATION} className={`cursor-pointer transition-transform ${location.pathname === Links.EDUCATION ? 'translate-x-3 text-indigo-500 font-bold' : 'translate-x-0'} `}>{NavBarStrings.EDUCATION}</Link>
           <Link to={Links.WORK_EXPERIENCE} className={`cursor-pointer transition-transform ${location.pathname === Links.WORK_EXPERIENCE ? 'translate-x-3 text-indigo-500 font-bold' : 'translate-x-0'} `}>{NavBarStrings.WORK_EXPERIENCE}</Link>
-          <Link to={Links.CONTACT} className={`cursor-pointer transition-transform ${location.pathname === Links.CONTACT ? 'translate-x-3 text-indigo-500 font-bold' : 'translate-x-0'} `}>{NavBarStrings.CONTACT}</Link>
+          <Link to={Links.RESUME} className={`cursor-pointer transition-transform ${location.pathname === Links.RESUME ? 'translate-x-3 text-indigo-500 font-bold' : 'translate-x-0'} `}>{NavBarStrings.RESUME}</Link>
         </ul>
       </div>
     </div>

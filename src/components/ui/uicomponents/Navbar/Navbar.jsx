@@ -28,7 +28,7 @@ const Navbar = () => {
               <Link to={Links.PROJECTS} className={`cursor-pointer transition-all underline_anim  ${location.pathname !== Links.PROJECTS ? "border-transparent": "bg-indigo-600/50 px-4 rounded-full text-white"}`}>{NavBarStrings.PROJECTS}</Link>
               <Link to={Links.EDUCATION} className={`cursor-pointer transition-all underline_anim ${location.pathname !== Links.EDUCATION ? "border-transparent": " bg-indigo-600/50 px-4 rounded-full text-white"}`}>{NavBarStrings.EDUCATION}</Link>
               <Link to={Links.WORK_EXPERIENCE} className={`cursor-pointer transition-all  underline_anim ${location.pathname !== Links.WORK_EXPERIENCE ? "border-transparent": " bg-indigo-600/50 px-4 rounded-full text-white"}`}>{NavBarStrings.WORK_EXPERIENCE}</Link>
-              <Link to={Links.CONTACT} className={`cursor-pointer transition-all underline_anim ${location.pathname !== Links.CONTACT ? "border-transparent": "bg-indigo-600/50 px-4 rounded-full text-white"}`}>{NavBarStrings.CONTACT}</Link>
+              <Link to={Links.RESUME} className={`cursor-pointer transition-all underline_anim ${location.pathname !== Links.RESUME ? "border-transparent": "bg-indigo-600/50 px-4 rounded-full text-white"}`}>{NavBarStrings.RESUME}</Link>
             </ul>
             <div className='cursor-pointer relative lg:hidden border-2 border-transparent p-1 rounded-full hover:bg-indigo-500/20 '>
               <span onClick={() => setIsMenuOpen(!isMenuOpen)}>
