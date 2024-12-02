@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
 import WorkExPath from '../../uicomponents/WorkExPath/WorkExPath';
-import {WorkDetails, WorkExperience} from '../../../data/personalData';
-import CompanyDetails from "../../uicomponents/WorkExPath/CompanyDetails.jsx";
+import { WorkExperience} from '../../../data/PersonalData';
 const WorkExperiencePage = () => {
   const [clickedWorkExperience, setClickedWorkExperience] = useState(0);
 
@@ -10,11 +9,11 @@ const WorkExperiencePage = () => {
   }, [clickedWorkExperience]);
 
   return (
-    <div className='h-[calc(100vh_-_60px)] overflow-hidden px-4 pt-10 pb-4 flex flex-row justify-center'>
-      <div className='flex flex-row flex-1 overflow-hidden justify-center'>
+    <div className='h-[calc(100vh_-_60px)] overflow-hidden p-4 flex flex-col justify-center'>
+      <h1 className='font-extrabold text-3xl pb-2'>Work Experience</h1>
+      <div className='w-full h-full pl-3 overflow-y-auto overflow-x-hidden'>
         <WorkExPath workExperience={WorkExperience.workList} onclick={index => setClickedWorkExperience(index)} />
       </div>
-      {/*<CompanyDetails companyDetails={WorkDetails[clickedWorkExperience]} /> :*/}
     </div>
   );
 };

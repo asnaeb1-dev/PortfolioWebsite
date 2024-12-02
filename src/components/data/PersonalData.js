@@ -384,7 +384,9 @@ export const WorkExperience = {
       duration: "July, 2023 - Currently working",
       timeSpan: "1 year 3 months",
       description: "I have been working on various projects. "
-    },
+    },{
+      timeSpan: "Currently working here",
+    }
   ]
 };
 

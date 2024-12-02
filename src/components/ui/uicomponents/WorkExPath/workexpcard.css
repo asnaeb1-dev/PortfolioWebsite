@@ -1,0 +1,9 @@
+.workexpcard {
+    position: absolute;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all;
+    border-radius: 0.5rem;
+    transition-duration: 500ms;
+    transition-delay: 200ms;
+}
