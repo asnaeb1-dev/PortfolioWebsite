@@ -39,7 +39,7 @@ const CompanyDetails = ({ companyDetails ={} }) => {
             </button>
           </div>
         </div>
-        <ProjectCard project={companyDetails?.projects[currentProject]}/>
+        {/* <ProjectCard project={companyDetails?.projects[currentProject]}/> */}
       </div>
     </div>
   );

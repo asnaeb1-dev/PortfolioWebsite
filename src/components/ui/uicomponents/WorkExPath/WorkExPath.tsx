@@ -6,7 +6,7 @@ const WorkExPath = ({ workExperience = [], onclick }) => {
     const [currentPosition, setCurrentPosition] = useState(0);
     return (
 			<div className='w-full md:w-56 flex justify-center'>
-				<div className='w-full h-full flex flex-col items-start md:items-center'>
+				<div className='w-full h-full flex flex-col items-start'>
 					{
 						workExperience?.map((company, index) => {
 							return (
@@ -50,7 +50,7 @@ const IndividualWorkExPath = ({ begin = false, isDone, onclick, index = 0, end =
 						index={index}
 					/>
 			}
-			<span className={`absolute w-[100dvh] text-sm font-bold opacity-0 top-2.5 left-[140%] lg:top-1/2  ${start && "opacity-100"} ${index % 2 === 0 ? "lg:left-[40px] lg:text-start": "lg:right-[40px] lg:text-right"}`}>
+			<span className={`absolute w-[100dvh] text-sm h-0 font-bold opacity-0 top-2.5 left-[200%] ${start && "opacity-100"} `}>
 				{details?.timeSpan}
 			</span>
 		</div>
