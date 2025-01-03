@@ -223,8 +223,8 @@ export const TailwindCSSIconFC = ({ width = 48, height = 48 }) => {
         y2="36.552"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#00c1e0"></stop>
-        <stop offset="1" stop-color="#009bb8"></stop>
+        <stop offset="0" stopColor="#00c1e0"></stop>
+        <stop offset="1" stopColor="#009bb8"></stop>
       </linearGradient>
       <path
         fill="url(#iOmQfjoCC4Hw6zVwRjSDha_x7XMNGh2vdqA_gr1)"
@@ -272,8 +272,8 @@ export const VSCodeIconFC = ({ width = 48, height = 48 }) => {
         y2="7.42"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#29b6f6" />
-        <stop offset="1" stop-color="#13b2f6" />
+        <stop offset="0" stopColor="#29b6f6" />
+        <stop offset="1" stopColor="#13b2f6" />
       </linearGradient>
       <path
         fill="url(#a)"
@@ -287,14 +287,14 @@ export const VSCodeIconFC = ({ width = 48, height = 48 }) => {
         y2="7.173"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset=".115" stop-color="#0076bb" />
-        <stop offset=".257" stop-color="#0069b0" />
-        <stop offset=".28" stop-color="#0069b0" />
-        <stop offset=".424" stop-color="#0069b0" />
-        <stop offset=".491" stop-color="#0072b7" />
-        <stop offset=".577" stop-color="#0076bb" />
-        <stop offset=".795" stop-color="#0076bb" />
-        <stop offset="1" stop-color="#006eb9" />
+        <stop offset=".115" stopColor="#0076bb" />
+        <stop offset=".257" stopColor="#0069b0" />
+        <stop offset=".28" stopColor="#0069b0" />
+        <stop offset=".424" stopColor="#0069b0" />
+        <stop offset=".491" stopColor="#0072b7" />
+        <stop offset=".577" stopColor="#0076bb" />
+        <stop offset=".795" stopColor="#0076bb" />
+        <stop offset="1" stopColor="#006eb9" />
       </linearGradient>
       <path
         fill="url(#b)"
@@ -320,8 +320,8 @@ export const SublimeTextIconFC = ({ width = 48, height = 48 }) => {
           y2="44.519"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#636363" />
-          <stop offset="1" stop-color="#444" />
+          <stop offset="0" stopColor="#636363" />
+          <stop offset="1" stopColor="#444" />
         </linearGradient>
         <linearGradient
           id="b"
@@ -331,8 +331,8 @@ export const SublimeTextIconFC = ({ width = 48, height = 48 }) => {
           y2="30.684"
           gradientUnits="userSpaceOnUse"
         >
-          <stop offset="0" stop-color="#ff9c0f" />
-          <stop offset=".813" stop-color="#d67e00" />
+          <stop offset="0" stopColor="#ff9c0f" />
+          <stop offset=".813" stopColor="#d67e00" />
         </linearGradient>
       </defs>
       <g data-name="Ð¡Ð»Ð¾Ð¹ 2">
@@ -425,8 +425,8 @@ const GitHubIconFC = ({ width = 48, height = 48 }) => {
         y2="23.508"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#4c4c4c" />
-        <stop offset="1" stop-color="#343434" />
+        <stop offset="0" stopColor="#4c4c4c" />
+        <stop offset="1" stopColor="#343434" />
       </linearGradient>
       <path
         fill="url(#a)"
@@ -531,8 +531,8 @@ const ViteIconFC = ({ width = 48, height = 48 }) => {
         gradientTransform="matrix(1 0 0 -1 0 514)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#41d1ff" />
-        <stop offset="1" stop-color="#9231be" />
+        <stop offset="0" stopColor="#41d1ff" />
+        <stop offset="1" stopColor="#9231be" />
       </linearGradient>
       <path
         fill="url(#a)"
@@ -547,8 +547,8 @@ const ViteIconFC = ({ width = 48, height = 48 }) => {
         gradientTransform="matrix(1 0 0 -1 0 514)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset="0" stop-color="#fed100" />
-        <stop offset="1" stop-color="#e36001" />
+        <stop offset="0" stopColor="#fed100" />
+        <stop offset="1" stopColor="#e36001" />
       </linearGradient>
       <path
         fill="url(#b)"
@@ -726,53 +726,89 @@ const LeetCodeIconFC = ({ width = 48, height = 48 }) => {
 
 export const IconFc = ({ name = "", width, height }) => {
   switch (name.toLocaleLowerCase()) {
-    case "leetcode":
+    case IconName.LEETCODE:
       return <LeetCodeIconFC width={width} height={height} />;
-    case "react":
+    case IconName.REACT:
       return <ReactIconFC width={width} height={height} />;
-    case "udemy":
+    case IconName.UDEMY:
       return <UdemyIconFC width={width} height={height} />;
-    case "redux":
+    case IconName.REDUX:
       return <ReduxIconFC width={width} height={height} />;
-    case "typescript":
+    case IconName.TYPESCRIPT:
       return <TypeScriptIconFC width={width} height={height} />;
-    case "webstorm":
+    case IconName.WEBSTORM:
       return <WebStormIconFC width={width} height={height} />;
-    case "css":
+    case IconName.CSS3:
       return <CSS3IconFC width={width} height={height} />;
-    case "nodejs":
+    case IconName.NODE_JS:
       return <NodeJSIconFC width={width} height={height} />;
-    case "git":
+    case IconName.GIT:
       return <GitIconFC width={width} height={height} />;
-    case "github":
+    case IconName.GITHUB:
       return <GitHubIconFC width={width} height={height} />;
-    case "gitlab":
+    case IconName.GITLAB:
       return <GitLabIconFC width={width} height={height} />;
-    case "vscode":
+    case IconName.VSCODE:
       return <VSCodeIconFC width={width} height={height} />;
-    case "vite":
+    case IconName.SUBLIME_TEXT:
+      return <SublimeTextIconFC width={width} height={height} />;
+    case IconName.INTELLIJ:
+      return <IntelliJIcon width={width} height={height} />;
+    case IconName.VITE:
       return <ViteIconFC width={width} height={height} />;
-    case "materialui":
-      return <MaterialUIIconFC width={width} height={height} />;
-    case "js":
-    case "javascript":
+    case IconName.JAVASCRIPT:
       return <JavaScriptIconFC width={width} height={height} />;
-    case "reactquery":
+    case IconName.REACT_QUERY:
       return <ReactQueryIconFC width={width} height={height} />;
-    case "html":
+    case IconName.HTML5:
       return <HTML5IconFC width={width} height={height} />;
-    case "java":
+    case IconName.JAVA:
       return <JavaIconFC width={width} height={height} />;
-    case "npm":
+    case IconName.NPM:
       return <NPMIconFC width={width} height={height} />;
-    case "reactrouter":
+    case IconName.REACT_ROUTER_DOM:
       return <ReactRouterDOMIconFC width={width} height={height} />;
-    case "webpack":
+    case IconName.WEBPACK:
       return <WebpackIconFC width={width} height={height} />;
-    case "gfg":
-    case "geeksforgeeks":
+    case IconName.GFG:
       return <GFGIconFC width={width} height={height} />;
+    case IconName.BOOTSTRAP:
+      return <BootstapIconFC width={width} height={height} />;
+    case IconName.MATERIAL_UI:
+      return <MaterialUIIconFC width={width} height={height} />;
+    case IconName.TAILWIND_CSS:
+      return <TailwindCSSIconFC width={width} height={height} />;
     default:
       return null;
   }
+};
+
+export const IconName = {
+  LEETCODE: "leetcode",
+  REACT: "react",
+  UDEMY: "udemy",
+  REDUX: "redux",
+  TYPESCRIPT: "typescript",
+  WEBSTORM: "webstorm",
+  CSS3: "css",
+  NODE_JS: "nodejs",
+  GIT: "git",
+  GITHUB: "github",
+  GITLAB: "gitlab",
+  VSCODE: "vscode",
+  SUBLIME_TEXT: "sublime",
+  INTELLIJ: "intellij",
+  VITE: "vite",
+  MATERIAL_UI: "materialui",
+  JAVASCRIPT: "js",
+  REACT_QUERY: "reactquery",
+  HTML5: "html",
+  JAVA: "java",
+  NPM: "npm",
+  REACT_ROUTER_DOM: "reactrouter",
+  WEBPACK: "webpack",
+  GFG: "gfg",
+  BOOTSTRAP: "bootstrap",
+  TAILWIND_CSS: "tailwind",
+  // Add more icon names as needed
 };

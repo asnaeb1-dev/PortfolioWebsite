@@ -1,32 +1,8 @@
-import {
-  BootstapIcon,
-  CSS3Icon,
-  GitHubIcon,
-  GitIcon,
-  GitLabIcon,
-  HTML5Icon,
-  IntelliJIcon,
-  JavaIcon,
-  JavaScriptIcon,
-  MaterialUIIcon,
-  NodeJSIcon,
-  NPMIcon,
-  ReactIcon,
-  ReactQueryIcon,
-  ReactRouterDOMIcon,
-  ReduxIcon,
-  SublimeTextIcon,
-  TailwindCSSIcon,
-  TypeScriptIcon,
-  ViteIcon,
-  VSCodeIcon,
-  WebpackIcon,
-  WebStormIcon
-} from "./Icons";
 
 import SuperheroAppImage from "../assets/supehero.png";
 import TaskrAppIcon from "../assets/taskrapp.png";
 import ReactComponent from "../assets/components.png";
+import { IconName } from "./Icons";
 
 export const LeetCode_Link = `https://leetcode.com/u/abhigyanrahawork76/`;
 export const GFG_Link = "https://www.geeksforgeeks.org/user/asnaeb1/";
@@ -38,22 +14,22 @@ export const Skills = {
       skills: [
         {
           skillName: "JavaScript",
-          icon: JavaScriptIcon,
+          iconName: IconName.JAVASCRIPT,
           progress: 80
         },
         {
           skillName: "Java",
-          icon: JavaIcon,
+          iconName: IconName.JAVA,
           progress: 85
         },
         {
           skillName: "HTML5",
-          icon: HTML5Icon,
+          iconName: IconName.HTML5,
           progress: 90
         },
         {
           skillName: "TypeScript",
-          icon: TypeScriptIcon,
+          iconName: IconName.TYPESCRIPT,
           progress: 75
         }
       ]
@@ -62,22 +38,22 @@ export const Skills = {
       skills: [
         {
           skillName: "React",
-          icon: ReactIcon,
+          iconName: IconName.REACT,
           progress: 90
         },
         {
           skillName: "Redux",
-          icon: ReduxIcon,
+          iconName: IconName.REDUX,
           progress: 80
         },
         {
           skillName: "React Router DOM",
-          icon: ReactRouterDOMIcon,
+          iconName: IconName.REACT_ROUTER_DOM,
           progress: 85
         },
         {
           skillName: "React Query",
-          icon: ReactQueryIcon,
+          iconName: IconName.REACT_QUERY,
           progress: 80
         },
       ]
@@ -86,22 +62,22 @@ export const Skills = {
       skills: [
         {
           skillName: "VS Code",
-          icon: VSCodeIcon,
+          iconName: IconName.VSCODE,
           progress: 80
         },
         {
           skillName: "Sublime Text",
-          icon: SublimeTextIcon,
+          iconName: IconName.SUBLIME_TEXT,
           progress: 75
         },
         {
           skillName: "IntelliJ IDEA",
-          icon: IntelliJIcon,
+          iconName: IconName.INTELLIJ,
           progress: 65
         },
         {
           skillName: "WebStorm",
-          icon: WebStormIcon,
+          iconName: IconName.WEBSTORM,
           progress: 70
         }
       ]
@@ -110,22 +86,22 @@ export const Skills = {
       skills: [
         {
           skillName: "CSS3",
-          icon: CSS3Icon,
+          iconName: IconName.CSS3,
           progress: 80
         },
         {
           skillName: "Material UI",
-          icon: MaterialUIIcon,
+          iconName: IconName.MATERIAL_UI,
           progress: 70
         },
         {
           skillName: "Tailwind CSS",
-          icon: TailwindCSSIcon,
+          iconName: IconName.TAILWIND_CSS,
           progress: 75
         },
         {
           skillName: "Bootstrap",
-          icon: BootstapIcon,
+          iconName: IconName.BOOTSTRAP,
           progress: 85
         },
       ]
@@ -134,17 +110,17 @@ export const Skills = {
       skills: [
         {
           skillName: "Git",
-          icon: GitIcon,
+          iconName: IconName.GIT,
           progress: 85
         },
         {
           skillName: "GitHub",
-          icon: GitHubIcon,
+          iconName: IconName.GITHUB,
           progress: 83
         },
         {
           skillName: "GitLab",
-          icon: GitLabIcon,
+          iconName: IconName.GITLAB,
           progress: 70
         },
       ]
@@ -153,22 +129,22 @@ export const Skills = {
       skills: [
         {
           skillName: "NodeJS",
-          icon: NodeJSIcon,
+          iconName: IconName.NODE_JS,
           progress: 80
         },
         {
           skillName: "Webpack",
-          icon: WebpackIcon,
+          iconName: IconName.WEBPACK,
           progress: 85
         },
         {
           skillName: "NPM",
-          icon: NPMIcon,
+          iconName: IconName.NPM,
           progress: 80
         },
         {
           skillName: "Vite",
-          icon: ViteIcon,
+          iconName: IconName.VITE,
           progress: 75
         }
       ]
@@ -181,22 +157,22 @@ export const Projects =  [
     projectImage: SuperheroAppImage,
     description: "This is an app born out of love for comics and superheros. Search, filter and get more knowledge about your favourite superhero. Marvel, DC, you can get it all here.",
     link: "https://supeheroapp.netlify.app/",
-    icon: ReactIcon,
+    iconName: IconName.REACT,
     techStack: [{
       skillName: "React",
-      icon: ReactIcon,
+      iconName: IconName.REACT,
     },{
       skillName: "HTML",
-      icon: HTML5Icon,
+      iconName: IconName.HTML5,
     }, {
       skillName: "JavaScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.JAVASCRIPT,
     },{
       skillName: "TailwindCSS",
-      icon: TailwindCSSIcon,
+      iconName: IconName.TAILWIND_CSS,
     },{
       skillName: "Redux",
-      icon: ReduxIcon,
+      iconName: IconName.REDUX,
     },],
     githubLink: `https://github.com/asnaeb1-dev/Superhero-app`
   },
@@ -205,25 +181,25 @@ export const Projects =  [
     projectImage: TaskrAppIcon,
     description: "This is a task management application which allows the user to CRUD tasks and keep track of them.",
     link: "",
-    icon: ReactIcon,
+    iconName: IconName.REACT,
     techStack: [{
       skillName: "React",
-      icon: ReactIcon,
+      iconName: IconName.REACT,
     },{
       skillName: "HTML",
-      icon: HTML5Icon,
+      iconName: IconName.HTML5,
     },{
       skillName: "CSS",
-      icon: CSS3Icon,
+      iconName: IconName.CSS3,
     }, {
       skillName: "JavaScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.JAVASCRIPT,
     },{
       skillName: "TailwindCSS",
-      icon: TailwindCSSIcon,
+      iconName: IconName.TAILWIND_CSS,
     },{
       skillName: "Redux",
-      icon: ReduxIcon,
+      iconName: IconName.REDUX,
     },],
     githubLink: `https://github.com/asnaeb1-dev/TaskManager`
   },
@@ -232,22 +208,22 @@ export const Projects =  [
     projectImage: ReactComponent,
     description: "This is a React app that contains all the components that I have built for various projects and can be used.",
     link: "",
-    icon: ReactIcon,
+    iconName: IconName.REACT,
     techStack: [{
       skillName: "React",
-      icon: ReactIcon,
+      iconName: IconName.REACT,
     },{
       skillName: "HTML",
-      icon: HTML5Icon,
+      iconName: IconName.HTML5,
     },{
       skillName: "CSS",
-      icon: CSS3Icon,
+      iconName: IconName.CSS3,
     }, {
       skillName: "JavaScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.JAVASCRIPT,
     }, {
       skillName: "TypeScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.TYPESCRIPT,
     }
     ],
     githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
@@ -257,22 +233,22 @@ export const Projects =  [
     projectImage: ReactComponent,
     description: "This is a React app that contains all the components that I have built for various projects and can be used.",
     link: "",
-    icon: ReactIcon,
+    iconName: IconName.HTML5,
     techStack: [{
       skillName: "React",
-      icon: ReactIcon,
+      iconName: IconName.REACT,
     },{
       skillName: "HTML",
-      icon: HTML5Icon,
+      iconName: IconName.HTML5,
     },{
       skillName: "CSS",
-      icon: CSS3Icon,
+      iconName: IconName.CSS3,
     }, {
       skillName: "JavaScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.JAVASCRIPT,
     }, {
       skillName: "TypeScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.TYPESCRIPT,
     }
     ],
     githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
@@ -282,22 +258,22 @@ export const Projects =  [
     projectImage: ReactComponent,
     description: "This is a React app that contains all the components that I have built for various projects and can be used.",
     link: "",
-    icon: ReactIcon,
+    iconName: IconName.HTML5,
     techStack: [{
       skillName: "React",
-      icon: ReactIcon,
+      iconName: IconName.REACT,
     },{
       skillName: "HTML",
-      icon: HTML5Icon,
+      iconName: IconName.HTML5,
     },{
       skillName: "CSS",
-      icon: CSS3Icon,
+      iconName: IconName.CSS3,
     }, {
       skillName: "JavaScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.JAVASCRIPT,
     }, {
       skillName: "TypeScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.TYPESCRIPT,
     }
     ],
     githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
@@ -307,22 +283,22 @@ export const Projects =  [
     projectImage: ReactComponent,
     description: "This is a React app that contains all the components that I have built for various projects and can be used.",
     link: "",
-    icon: ReactIcon,
+    iconName: IconName.HTML5,
     techStack: [{
       skillName: "React",
-      icon: ReactIcon,
+      iconName: IconName.REACT,
     },{
       skillName: "HTML",
-      icon: HTML5Icon,
+      iconName: IconName.HTML5,
     },{
       skillName: "CSS",
-      icon: CSS3Icon,
+      iconName: IconName.CSS3,
     }, {
       skillName: "JavaScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.JAVASCRIPT,
     }, {
       skillName: "TypeScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.TYPESCRIPT,
     }
     ],
     githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
@@ -332,22 +308,22 @@ export const Projects =  [
     projectImage: ReactComponent,
     description: "This is a React app that contains all the components that I have built for various projects and can be used.",
     link: "",
-    icon: ReactIcon,
+    iconName: IconName.HTML5,
     techStack: [{
       skillName: "React",
-      icon: ReactIcon,
+      iconName: IconName.REACT,
     },{
       skillName: "HTML",
-      icon: HTML5Icon,
+      iconName: IconName.HTML5,
     },{
       skillName: "CSS",
-      icon: CSS3Icon,
+      iconName: IconName.CSS3,
     }, {
       skillName: "JavaScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.JAVASCRIPT,
     }, {
       skillName: "TypeScript",
-      icon: JavaScriptIcon,
+      iconName: IconName.TYPESCRIPT,
     }
     ],
     githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
@@ -405,22 +381,22 @@ export const WorkDetails = [
         timeLine: "November, 2022 - May, 2023",
         techStackUsed: [{
           techStack: "JavaScript",
-          icon: JavaScriptIcon
+          iconName: IconName.JAVASCRIPT
         }, {
           techStack: "HTML5",
-          icon: HTML5Icon
+          iconName: IconName.HTML5
         }, {
           techStack: "CSS3",
-          icon: CSS3Icon
+          iconName: IconName.CSS3
         }, {
           techStack: "TypeScript",
-          icon: TypeScriptIcon
+          iconName: IconName.TYPESCRIPT
         }, {
           techStack: "React",
-          icon: ReactIcon
+          iconName: IconName.REACT
         }, {
           techStack: "Redux",
-          icon: ReduxIcon
+          iconName: IconName.REDUX
         }],
         projectSynopsis: "BlackJack 3.0 is a part of the company's effort to recreate all of their existing games which are designed in various tech stacks to a uniform one tech stack platform for easy usage, maintainability and increased overall efficiency.",
         description: `I have developed a reusable React component called the "Decision Panel" for the BlackJack game.
@@ -444,22 +420,22 @@ export const WorkDetails = [
         timeLine: "November, 2022 - May, 2023",
         techStackUsed: [{
           techStack: "JavaScript",
-          icon: JavaScriptIcon
+          iconName: IconName.JAVASCRIPT
         }, {
           techStack: "HTML5",
-          icon: HTML5Icon
+          iconName: IconName.HTML5
         }, {
           techStack: "CSS3",
-          icon: CSS3Icon
+          iconName: IconName.CSS3
         }, {
           techStack: "TypeScript",
-          icon: TypeScriptIcon
+          iconName: IconName.TYPESCRIPT
         }, {
           techStack: "React",
-          icon: ReactIcon
+          iconName: IconName.REACT
         }, {
           techStack: "Redux",
-          icon: ReduxIcon
+          iconName: IconName.REDUX
         }],
         projectSynopsis: "BlackJack 3.0 is a part of the company's effort to recreate all of their existing games which are designed in various tech stacks to a uniform one tech stack platform for easy usage, maintainability and increased overall efficiency.",
         description: `I have developed a reusable React component called the "Decision Panel" for the BlackJack game.
@@ -483,22 +459,22 @@ export const WorkDetails = [
         timeLine: "November, 2022 - May, 2023",
         techStackUsed: [{
           techStack: "JavaScript",
-          icon: JavaScriptIcon
+          iconName: IconName.JAVASCRIPT
         }, {
           techStack: "HTML5",
-          icon: HTML5Icon
+          iconName: IconName.HTML5
         }, {
           techStack: "CSS3",
-          icon: CSS3Icon
+          iconName: IconName.CSS3
         }, {
           techStack: "TypeScript",
-          icon: TypeScriptIcon
+          iconName: IconName.TYPESCRIPT
         }, {
           techStack: "React",
-          icon: ReactIcon
+          iconName: IconName.REACT
         }, {
           techStack: "Redux",
-          icon: ReduxIcon
+          iconName: IconName.REDUX
         }],
         projectSynopsis: "BlackJack 3.0 is a part of the company's effort to recreate all of their existing games which are designed in various tech stacks to a uniform one tech stack platform for easy usage, maintainability and increased overall efficiency.",
         description: `I have developed a reusable React component called the "Decision Panel" for the BlackJack game.
@@ -524,22 +500,22 @@ export const WorkDetails = [
         timeLine: "July, 2024 - Development continuing",
         techStackUsed:  [{
           techStack: "JavaScript",
-          icon: JavaScriptIcon
+          iconName: IconName.JAVASCRIPT
         }, {
           techStack: "HTML5",
-          icon: HTML5Icon
+          iconName: IconName.HTML5
         }, {
           techStack: "CSS3",
-          icon: CSS3Icon
+          iconName: IconName.CSS3
         }, {
           techStack: "TypeScript",
-          icon: TypeScriptIcon
+          iconName: IconName.TYPESCRIPT
         }, {
           techStack: "React",
-          icon: ReactIcon
+          iconName: IconName.REACT
         }, {
           techStack: "Redux",
-          icon: ReduxIcon
+          iconName: IconName.REDUX
         }],
         projectSynopsis: "BlackJack 3.0 is a part of the company's effort to recreate all of their existing games which are designed in various tech stacks to a uniform one tech stack platform for easy usage, maintainability and increased overall efficiency.",
         description: `I have developed a reusable React component called the "Decision Panel" for the BlackJack game.
@@ -553,16 +529,16 @@ export const WorkDetails = [
         timeLine: "May, 2024 - July,2024",
         techStackUsed:  [{
           techStack: "JavaScript",
-          icon: JavaScriptIcon
+          iconName: IconName.JAVASCRIPT
         }, {
           techStack: "HTML5",
-          icon: HTML5Icon
+          iconName: IconName.HTML5
         }, {
           techStack: "CSS3",
-          icon: CSS3Icon
+          iconName: IconName.CSS3
         }, {
           techStack: "TypeScript",
-          icon: TypeScriptIcon
+          iconName: IconName.TYPESCRIPT
         }],
         projectSynopsis: "This is a a new feature to be added to all the BlackJack varient games that we provide. ",
         description: `I have developed a reusable JS component called the "Basic Strategy" for the Bet Behind Pro game.
@@ -574,22 +550,157 @@ export const WorkDetails = [
         timeLine: "Jan, 2024 - April, 2024",
         techStackUsed: [{
           techStack: "JavaScript",
-          icon: JavaScriptIcon
+          iconName: IconName.JAVASCRIPT
         }, {
           techStack: "HTML5",
-          icon: HTML5Icon
+          iconName: IconName.HTML5
         }, {
           techStack: "CSS3",
-          icon: CSS3Icon
+          iconName: IconName.CSS3
         }, {
           techStack: "TypeScript",
-          icon: TypeScriptIcon
+          iconName: IconName.TYPESCRIPT
         }],
         projectSynopsis: "During the development of BetBehind Pro, the requirement was to build a component that acts as a basic strategy to check the dealings of the cards that lead to certain decision such as Hit, Stand, Double or Split. So a user can predict to certain extent what decision the bots will choose.",
         description: `I have developed a reusable JS component called the "Basic Strategy" for the Bet Behind Pro game.
                                 The purpose of this component is to provide a interface that allows the player to predict to a certain extent between Hit, Stand, Double or Split that will be taken by then Bots.
                                 after respective cards have been dealt.`,
         projectLink: ""
+      }
+    ]
+  }
+]
+
+export const CertificationList = [
+  {
+    certificateName: "React & Hooks Course",
+    institution: "Udemy",
+    date: "Dec 7th, 2024",
+    duration: "4 weeks",
+    certLink: "https://udemy-certificate.s3.amazonaws.com/image/UC-f7fe6c2d-7608-49a3-b22b-698a1872f3e7.jpg",
+    courseLink: 'https://www.udemy.com/course/the-complete-react-native-and-redux-course/?couponCode=JUST4U02223',
+    coachName: "Stephen Grider",
+    skills: [
+      {
+        skillName: "React",
+        skillIcon: IconName.REACT
+      },{
+        skillName: "Redux",
+        skillIcon: IconName.REDUX
+      },{
+        skillName: "JavaScript",
+        skillIcon: IconName.JAVASCRIPT
+      },{
+        skillName: "TypeScript",
+        skillIcon: IconName.TYPESCRIPT
+      }
+    ]
+  },{
+    certificateName: "Namaste React",
+    institution: "NamasteDev",
+    date: "Ongoing",
+    duration: "4 weeks",
+    courseLink: 'https://namastedev.com/learn/namaste-react',
+    coachName: "Akshay Saini",
+    skills: [
+      {
+        skillName: "React",
+        skillIcon: IconName.REACT
+      },{
+        skillName: "Redux",
+        skillIcon: IconName.REDUX
+      },{
+        skillName: "JavaScript",
+        skillIcon: IconName.JAVASCRIPT
+      },{
+        skillName: "TypeScript",
+        skillIcon: IconName.TYPESCRIPT
+      }
+    ]
+  },{
+    certificateName: "Namaste Frontend Design",
+    institution: "NamasteDev",
+    date: "Ongoing",
+    duration: "4 weeks",
+    courseLink: "https://namastedev.com/learn/namaste-frontend-system-design",
+    coachName: "Akshay Saini",
+    skills: [
+      {
+        skillName: "React",
+        skillIcon: IconName.REACT
+      },{
+        skillName: "Redux",
+        skillIcon: IconName.REDUX
+      },{
+        skillName: "JavaScript",
+        skillIcon: IconName.JAVASCRIPT
+      },{
+        skillName: "TypeScript",
+        skillIcon: IconName.TYPESCRIPT
+      }
+    ]
+  },{
+    certificateName: "Web Development Certification",
+    institution: "Udemy",
+    date: "Dec 7th, 2024",
+    duration: "4 weeks",
+    certLink: "https://udemy-certificate.s3.amazonaws.com/image/UC-8f7e5fc7-2786-413c-8deb-f1661451a7b3.jpg",
+    courseLink: "https://www.udemy.com/course/the-web-developer-bootcamp/",
+    coachName: "Colt Steele",
+    skills: [
+      {
+        skillName: "React",
+        skillIcon: IconName.REACT
+      },{
+        skillName: "Redux",
+        skillIcon: IconName.REDUX
+      },{
+        skillName: "JavaScript",
+        skillIcon: IconName.JAVASCRIPT
+      },{
+        skillName: "TypeScript",
+        skillIcon: IconName.TYPESCRIPT
+      }
+    ]
+  }, {
+    certificateName: "System Design Certification",
+    institution: "GeeksForGeeks",
+    date: "",
+    duration: "4 weeks",
+    certLink: "https://firebasestorage.googleapis.com/v0/b/tasker-task-manager.appspot.com/o/today.png?alt=media&token=f504308f-3581-430b-9b75-a85923f07b57",
+    courseLink: "https://www.coursera.org/learn/software-engineering",
+    coachName: "Sandeep Jain",
+    skills: [
+      {
+        skillName: "React",
+        skillIcon: IconName.REACT
+      },{
+        skillName: "Redux",
+        skillIcon: IconName.REDUX
+      },{
+        skillName: "JavaScript",
+        skillIcon: IconName.JAVASCRIPT
+      },{
+        skillName: "TypeScript",
+        skillIcon: IconName.TYPESCRIPT
+      }
+    ]
+  },{
+    certificateName: "JavaScript (Basic) Certificate",
+    institution: "HackerRank",
+    date: "June 28th, 2020",
+    duration: "4 weeks",
+    isIframe: true,
+    certLink: "https://firebasestorage.googleapis.com/v0/b/tasker-task-manager.appspot.com/o/Screenshot%202024-12-29%20112919.png?alt=media&token=8911a3ac-a336-46e2-b33f-54a097c0e210",
+    courseLink: "https://www.coursera.org/learn/software-engineering",
+    coachName: "HackerRank",
+    skills: [
+      {
+        skillName: "JavaScript",
+        skillIcon: IconName.JAVASCRIPT
+      },{
+        skillName: "TypeScript",
+        skillIcon: IconName.TYPESCRIPT
       }
     ]
   }
