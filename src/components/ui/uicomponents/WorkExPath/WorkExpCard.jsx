@@ -5,9 +5,9 @@ const WorkExpCard = ({ workDetails = {}, index = 0, start, onclick }) => {
   return (
     <div
       onClick={onclick}
-      className={`h-auto workexpcard hover:scale-[102%] shadow-lg hover:shadow-2xl bg-indigo-500/40 ${
+      className={`h-auto workexpcard hover:scale-[102%] origin-left shadow-lg hover:shadow-2xl bg-indigo-500/40 ${
         start ? "opacity-100" : "opacity-0"
-      } p-3 w-[80dvw] max-w-[300px] md:max-w-[350px] xl:max-w-[450px] xl:h-[100px] top-10 left-[140%]`}
+      } p-3 w-[80dvw] max-w-[300px] md:max-w-[350px] xl:max-w-[450px] lg:h-[150px] top-10 left-[140%]`}
     >
       <div className="flex flex-col gap-3">
         <div className="flex flex-col">
@@ -19,8 +19,10 @@ const WorkExpCard = ({ workDetails = {}, index = 0, start, onclick }) => {
               <FaMouse color={"white"} />
             </span>
           </span>
-          <p className="text-[12px] lg:text-sm">{workDetails.designation}</p>
-          <p className="text-[10px]">{workDetails.duration}</p>
+          <p className="text-[12px] lg:text-sm font-semibold">
+            {workDetails.designation}
+          </p>
+          <p className="text-[10px] font-semibold">{workDetails.duration}</p>
         </div>
       </div>
     </div>

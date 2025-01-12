@@ -1,13 +1,60 @@
 .projectCard {
-    animation: fadeIn 1s forwards 300ms ease;
+  animation: fadeIn 1s forwards 300ms ease;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
+  from {
+    opacity: 0;
+  }
 
-    to {
-        opacity: 1;
-    }
+  to {
+    opacity: 1;
+  }
+}
+
+.animateOpenMobile {
+  animation: animateOpen 0.7s forwards ease-in-out;
+}
+
+@keyframes animateOpen {
+  from {
+    height: 0px;
+    overflow: hidden;
+  }
+
+  to {
+    height: calc(100vh - 70px);
+    overflow: auto;
+  }
+}
+
+.animateOpenDesktop {
+  animation: animateOpenDesktop 0.7s forwards ease-in-out;
+}
+
+@keyframes animateOpenDesktop {
+  from {
+    width: 0px;
+    overflow: hidden;
+  }
+
+  to {
+    width: 50%;
+    overflow: auto;
+  }
+}
+
+.animateCloseMobile {
+  animation: animateClose 0.7s forwards ease-in-out;
+}
+
+@keyframes animateClose {
+  from  {
+    height: calc(100vh - 70px);
+  }
+
+  to {
+    height: 0px;
+    overflow: hidden;
+  }
 }

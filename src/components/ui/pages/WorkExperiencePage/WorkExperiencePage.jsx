@@ -1,12 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import WorkExPath from "../../uicomponents/WorkExPath/WorkExPath";
-import { WorkExperience } from "../../../data/PersonalData";
+import { WorkDetails, WorkExperience } from "../../../data/PersonalData";
 
 import MobileWorkExpCard from "../../uicomponents/WorkExPath/MobileWorkExpCard";
 import CompanyDetails from "../../uicomponents/WorkExPath/CompanyDetails";
 
 const WorkExperiencePage = () => {
   const [clickedWorkExperience, setClickedWorkExperience] = useState(-1);
+
+  useEffect(() => {
+    if (clickedWorkExperience === -1) return;
+    console.log(
+      "iwre",
+      clickedWorkExperience,
+      WorkDetails[clickedWorkExperience]
+    );
+  }, [clickedWorkExperience]);
 
   return (
     <div className="h-[calc(100vh_-_60px)] overflow-hidden relative p-4 pl-0 flex flex-row lg:w-4/5 lg:mx-auto lg:pt-8">
@@ -22,9 +31,12 @@ const WorkExperiencePage = () => {
         </div>
       </div>
       <div className="flex-0 md:flex-1 bg-gradient-to-tr bg-grad h-[calc(100vh_-_140px)] rounded-xl"></div>
-      {/* {
-        clickedWorkExperience !== -1 && <CompanyDetails companyDetails={WorkExperience[clickedWorkExperience]} />
-      } */}
+      {clickedWorkExperience !== -1 && (
+        <CompanyDetails
+          handleClose={() => setClickedWorkExperience((val) => -1)}
+          companyDetails={WorkDetails[clickedWorkExperience]}
+        />
+      )}
     </div>
   );
 };

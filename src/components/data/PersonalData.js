@@ -338,6 +338,7 @@ export const WorkExperience = {
       designation: "Software Engineer - Intern",
       duration: "Jan, 2020 - Mar, 2020",
       timeSpan: "3 months",
+      location: "Hyderabad, India",
       description: "I have been working on various projects."
     },{
       companyName: "ValueLabs LLP",
@@ -345,20 +346,23 @@ export const WorkExperience = {
       designation: "Software Engineer",
       duration: "June, 2020 - September, 2022",
       timeSpan: "2 years 2 months",
+      location: "Hyderabad, India",
       description: "I have been working on various projects. "
     },{
       companyName: "Reputation",
       companyLink: "https://reputation.com/",
       designation: "Software Engineer - Frontend",
       duration: "October, 2022 - June, 2023",
+      location: "Hyderabad, India",
       timeSpan: "8 months",
       description: "I have been working on various projects."
     },{
-      companyName: "PragmaticPlay(Arrise Solutions Pvt. Ltd.)",
+      companyName: "PragmaticPlay (Arrise Solutions Pvt. Ltd.)",
       companyLink: "https://www.pragmaticplay.com/en/#",
       designation: "SDE - Frontend",
       duration: "July, 2023 - Currently working",
       timeSpan: "1 year 3 months",
+      location: "Hyderabad, India",
       description: "I have been working on various projects. "
     },{
       timeSpan: "Currently working here",
@@ -371,10 +375,12 @@ export const WorkDetails = [
     companyName: "ValueLabs",
     designation: "Software Engineer - Intern",
     duration: "Jab, 2020 - Mar, 2022",
+    companyLink: "https://www.valuelabs.com/",
+    location: "Hyderabad, India",
     description: `They are the trailblazers in Reputation Experience Management. And over the past decade, they have been building the leading platform to enhance the customer experience, improve a brand’s online presence and connect with the communities that matter.
-                        Their superpower is not just collecting sentiment data, but in giving the businesses actionable insights to anticipate the needs of their customers and communities. They are a business's eyes and ears in every space a customer talks, posts, reviews and recommends. Translating all they gather into insights a business can actually use.
-                        Insights that make customers feel heard. Insights that transform the best customers into advocates.
-                        Insights that leave nothing in the dark. Empowering a business with all of that information to learn, grow and even anticipate the needs of those around it.`
+                  Their superpower is not just collecting sentiment data, but in giving the businesses actionable insights to anticipate the needs of their customers and communities. They are a business's eyes and ears in every space a customer talks, posts, reviews and recommends. Translating all they gather into insights a business can actually use.
+                  Insights that make customers feel heard. Insights that transform the best customers into advocates.
+                  Insights that leave nothing in the dark. Empowering a business with all of that information to learn, grow and even anticipate the needs of those around it.`
     , projects: [
       {
         projectName: "Business Listing ",
@@ -410,6 +416,8 @@ export const WorkDetails = [
     companyName: "ValueLabs",
     designation: "Software Engineer",
     duration: "June, 2020 - September, 2022",
+    location: "Hyderabad, India",
+    companyLink: "https://www.valuelabs.com/",
     description: `They are the trailblazers in Reputation Experience Management. And over the past decade, they have been building the leading platform to enhance the customer experience, improve a brand’s online presence and connect with the communities that matter.
                         Their superpower is not just collecting sentiment data, but in giving the businesses actionable insights to anticipate the needs of their customers and communities. They are a business's eyes and ears in every space a customer talks, posts, reviews and recommends. Translating all they gather into insights a business can actually use.
                         Insights that make customers feel heard. Insights that transform the best customers into advocates.
@@ -448,6 +456,8 @@ export const WorkDetails = [
   }, {
     companyName: "Reputation",
     designation: "Frontend Engineer",
+    location: "Hyderabad, India",
+    companyLink: "https://reputation.com/",
     duration: "October, 2022 - June, 2023",
     description: `They are the trailblazers in Reputation Experience Management. And over the past decade, they have been building the leading platform to enhance the customer experience, improve a brand’s online presence and connect with the communities that matter.
                         Their superpower is not just collecting sentiment data, but in giving the businesses actionable insights to anticipate the needs of their customers and communities. They are a business's eyes and ears in every space a customer talks, posts, reviews and recommends. Translating all they gather into insights a business can actually use.
@@ -477,25 +487,17 @@ export const WorkDetails = [
           iconName: IconName.REDUX
         }],
         projectSynopsis: "BlackJack 3.0 is a part of the company's effort to recreate all of their existing games which are designed in various tech stacks to a uniform one tech stack platform for easy usage, maintainability and increased overall efficiency.",
-        description: `I have developed a reusable React component called the "Decision Panel" for the BlackJack game.
-                                The purpose of this component is to provide a interface that allows the player to decide between Hit, Stand, Double or Split
-                                after respective cards have been dealt. The scope of this component isn't just for BlackJack game and will be a part of the CORE COMPONENTS,
-                                which will be used in various gaming products throughout the company. 
-                                This component is designed to be flexible and easily reusable in different games, and also it supports all screen sizes throughout the spectrum of resizing.`,
         projectLink: ""
       }]
   }, {
     companyName: "PragmaticPlay (Arrise Solutions Pvt. Ltd.)",
     designation: "Software Development Engineer - I, Frontend",
+    location: "Hyderabad, India",
+    companyLink: "https://www.pragmaticplay.com/en/#",
     duration: "12th July, 2023 - Ongoing Employment",
-    description: `PragmaticPlay is a leading gaming company focused on creating innovative solutions for businesses across various the gaming industry and providing relaible and consistent solutions.
-                        My role involved developing new features and game components.
-                        I have also improved existing features in the frontend of our product.
-                        I used React, TypeScript, and Tailwind CSS to build the UI and developed various UI components.
-                        I also collaborated with the backend team to implement the necessary API endpoints and data fetching logic.
-                        I am proud of the work I have been doing in the frontend and believe that my skills and experience make me a valuable asset to PragmaticPlay.`,
     projects: [
       {
+        projectImageLink: "https://www.livecasinocomparer.com/wp-content/uploads/2022/06/fullscreen-pragmatic-speed-blackjack.jpg",
         projectName: "BlackJack 3.0",
         timeLine: "July, 2024 - Development continuing",
         techStackUsed:  [{
@@ -547,6 +549,7 @@ export const WorkDetails = [
         projectLink: ""
       },{
         projectName: "Bet Behind Pro",
+        projectImageLink: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXOpPPPk5tTpIaBR9fFmzuyly_zpqnauveOQ&s",
         timeLine: "Jan, 2024 - April, 2024",
         techStackUsed: [{
           techStack: "JavaScript",
