@@ -12,7 +12,7 @@ const ProjectItem = ({ prop }) => {
   return (
     <div
       className={
-        "w-full h-[300px] md:h-[300px] xl:h-[400px] bg-cover rounded-lg relative bg-center cursor-pointer"
+        "w-full h-[300px] md:h-[300px] xl:h-[400px] bg-cover rounded-2xl relative bg-center cursor-pointer"
       }
     >
       <img
@@ -24,7 +24,7 @@ const ProjectItem = ({ prop }) => {
           <p className="text-white text-2xl font-bold">{title}</p>
           <ProjectLinkFAB projectLink={githubLink} />
         </span>
-        <div className="w-2/3 max-h-[150px] absolute rounded-xl overflow-auto left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-row gap-5 flex-wrap">
+        <div className="w-2/3 max-h-[150px] absolute rounded-2xl overflow-auto left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2 flex flex-row gap-3 flex-wrap">
           {techStack.map(({ skillName }, index) => (
             <SmallSkillItem key={index} skillName={skillName} />
           ))}

@@ -87,14 +87,14 @@ const ProjectsPage = () => {
 
   return (
     <div
-      className={`w-full h-[calc(100dvh_-_95px)] px-4 lg:px-0 overflow-hidden lg:h-[calc(100dvh_-_112px)] flex flex-col items-center mt-8`}
+      className={`w-full h-[calc(100dvh_-_65px)] p-4 lg:px-0 overflow-hidden lg:h-[calc(100dvh_-_80px)] flex flex-col items-center pt-10`}
     >
       {/* mobile layout */}
       <span className={`lg:hidden w-full flex items-center justify-between`}>
         <TabLayout
           currentTopic={currentTab}
           handleClick={(index) => setCurrentTab(index)}
-          tabList={["Coding", ["Projects"]]}
+          tabList={["Coding", "Projects"]}
         />
         <span
           title={"GitHub"}
@@ -131,11 +131,11 @@ const ProjectsPage = () => {
 
 const CodingLayout = ({ leetCodeProfile, gfgProfile }) => {
   return (
-    <div className={`w-full mt-2 overflow-hidden`}>
+    <div className={`w-full overflow-hidden`}>
       <div
         className={` hidden lg:flex flex-row w-full justify-between items-center`}
       >
-        <h1 className={"font-extrabold text-4xl lg:text-4xl"}>Coding</h1>
+        <h1 className={"font-extrabold text-4xl py-2 lg:text-4xl"}>Coding</h1>
         <span
           title={"GitHub"}
           className={`p-2 rounded-full transition-all border-2 hover:scale-110 hover:text-white hover:bg-indigo-500 text-indigo-500 border-indigo-500 cursor-pointer `}
@@ -143,7 +143,7 @@ const CodingLayout = ({ leetCodeProfile, gfgProfile }) => {
           <FaGithub size={20} />
         </span>
       </div>
-      <div className="w-full md:w-1/4 h-10 rounded-xl mt-2 bg-indigo-400/40 text-sm font-semibold backdrop-saturate-200 px-4 justify-between flex items-center flex-row">
+      <div className="w-full md:w-1/4 h-10 rounded-xl mt-4 bg-indigo-400/40 text-sm font-semibold backdrop-saturate-200 px-4 justify-between flex items-center flex-row">
         <span className="flex flex-row gap-2 items-center">
           <span className="bg-red-500 rounded-md w-5 h-5"></span>
           <p>Hard</p>
@@ -158,7 +158,7 @@ const CodingLayout = ({ leetCodeProfile, gfgProfile }) => {
         </span>
       </div>
       <div
-        className={`w-full grid grid-cols-1 md:grid-cols-2 gap-10 my-5 overflow-y-auto`}
+        className={`w-full h-full grid grid-cols-1 md:grid-cols-2 gap-10 my-5 overflow-y-auto`}
       >
         <CodingCard
           link={LeetCode_Link}
