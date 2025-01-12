@@ -11,17 +11,23 @@ import { MdNavigateNext as NextIcon } from "react-icons/md";
 import "./educationpage.css";
 
 const EducationPage = () => {
-  const [currentTab, setCurrentTab] = useState(1);
+  const [currentTab, setCurrentTab] = useState(0);
   const [certificateIndex, setCertificateIndex] = useState(0);
   return (
-    <div className={"w-full h-[calc(100vh_-_60px)] pt-6 overflow-hidden"}>
-      <div className="w-full h-full px-4 flex flex-col gap-2">
+    <div
+      className={
+        "w-full lg:w-4/5 lg:m-auto h-[calc(100vh_-_60px)] pt-6 overflow-hidden"
+      }
+    >
+      <div className="w-full h-full px-4 flex flex-col gap-2 lg:pb-4">
         <span className="flex flex-row justify-between items-center">
-          <TabLayout
-            tabList={["Education", "Certifications"]}
-            currentTopic={currentTab}
-            handleClick={(index) => setCurrentTab(index)}
-          />
+          <span className="block lg:hidden">
+            <TabLayout
+              tabList={["Education", "Certifications"]}
+              currentTopic={currentTab}
+              handleClick={(index) => setCurrentTab(index)}
+            />
+          </span>
           <span
             title="Next Certification"
             onPointerUp={() =>
