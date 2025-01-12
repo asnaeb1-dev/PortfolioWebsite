@@ -200,7 +200,7 @@ const ProjectLayout = ({ projectList = [] }) => {
         </span>
         <div
           className={
-            "grid h-full overflow-y-auto  overflow-x-hidden grid-cols-2 gap-4"
+            "grid h-full overflow-y-auto  overflow-x-hidden grid-cols-1 md:grid-cols-2 gap-4 px-2"
           }
         >
           {projectList.map((project, index) => (

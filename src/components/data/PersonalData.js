@@ -159,20 +159,15 @@ export const Projects =  [
     link: "https://supeheroapp.netlify.app/",
     iconName: IconName.REACT,
     techStack: [{
-      skillName: "React",
-      iconName: IconName.REACT,
+      skillName: IconName.REACT,
     },{
-      skillName: "HTML",
-      iconName: IconName.HTML5,
+      skillName: IconName.HTML5,
     }, {
-      skillName: "JavaScript",
-      iconName: IconName.JAVASCRIPT,
+      skillName: IconName.JAVASCRIPT,
     },{
-      skillName: "TailwindCSS",
-      iconName: IconName.TAILWIND_CSS,
+      skillName: IconName.TAILWIND_CSS,
     },{
-      skillName: "Redux",
-      iconName: IconName.REDUX,
+      skillName: IconName.REDUX,
     },],
     githubLink: `https://github.com/asnaeb1-dev/Superhero-app`
   },
