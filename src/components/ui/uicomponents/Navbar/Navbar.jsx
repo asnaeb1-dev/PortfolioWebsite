@@ -9,6 +9,7 @@ import DayNightSwitch from "../DayNightSwitch/DayNightSwitch";
 
 import "./navbar.css";
 import MobileMenu from "../MobileMenu/MobileMenu.jsx";
+import ColorSwitch from "../ColorSwitch/ColorSwitch.jsx";
 
 const Navbar = () => {
   const location = useLocation();
@@ -23,7 +24,7 @@ const Navbar = () => {
           src={ProfilePicture}
           width={40}
           height={40}
-          className=" object-cover bg-white p-0.5 lg:p-0 aspect-square rounded-full cursor-pointer"
+          className=" object-cover bg-white p-0.5 lg:p-0 aspect-square rounded-full cursor-pointer hover:scale-110 transition-transform"
         />
         <p className="hidden md:block lg:hidden xl:block">Abhigyan Raha</p>
       </div>
@@ -102,11 +103,12 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <div className={"hidden lg:block"}>
+      <div className={"hidden lg:flex flex-row items-center gap-2"}>
         <DayNightSwitch
           isEnabled={isDarkModeEnabled}
           toggleSwitch={() => setDarkModeEnabled(!isDarkModeEnabled)}
         />
+        <ColorSwitch />
       </div>
     </div>
   );
