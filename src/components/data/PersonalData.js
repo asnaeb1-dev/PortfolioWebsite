@@ -372,10 +372,7 @@ export const WorkDetails = [
     duration: "Jab, 2020 - Mar, 2022",
     companyLink: "https://www.valuelabs.com/",
     location: "Hyderabad, India",
-    description: `They are the trailblazers in Reputation Experience Management. And over the past decade, they have been building the leading platform to enhance the customer experience, improve a brand’s online presence and connect with the communities that matter.
-                  Their superpower is not just collecting sentiment data, but in giving the businesses actionable insights to anticipate the needs of their customers and communities. They are a business's eyes and ears in every space a customer talks, posts, reviews and recommends. Translating all they gather into insights a business can actually use.
-                  Insights that make customers feel heard. Insights that transform the best customers into advocates.
-                  Insights that leave nothing in the dark. Empowering a business with all of that information to learn, grow and even anticipate the needs of those around it.`
+    description: `ValueLabs is a global technology company offering consulting, digital solutions, and product development services. Founded in 1997 and headquartered in Hyderabad, India, the company specializes in delivering tailored IT solutions across various industries, including healthcare, retail, finance, and media`
     , projects: [
       {
         projectName: "Business Listing ",
@@ -413,10 +410,7 @@ export const WorkDetails = [
     duration: "June, 2020 - September, 2022",
     location: "Hyderabad, India",
     companyLink: "https://www.valuelabs.com/",
-    description: `They are the trailblazers in Reputation Experience Management. And over the past decade, they have been building the leading platform to enhance the customer experience, improve a brand’s online presence and connect with the communities that matter.
-                        Their superpower is not just collecting sentiment data, but in giving the businesses actionable insights to anticipate the needs of their customers and communities. They are a business's eyes and ears in every space a customer talks, posts, reviews and recommends. Translating all they gather into insights a business can actually use.
-                        Insights that make customers feel heard. Insights that transform the best customers into advocates.
-                        Insights that leave nothing in the dark. Empowering a business with all of that information to learn, grow and even anticipate the needs of those around it.`
+    description: `ValueLabs is a global technology company offering consulting, digital solutions, and product development services. Founded in 1997 and headquartered in Hyderabad, India, the company specializes in delivering tailored IT solutions across various industries, including healthcare, retail, finance, and media`
     , projects: [
       {
         projectName: "Business Listing ",
@@ -488,6 +482,8 @@ export const WorkDetails = [
     companyName: "PragmaticPlay (Arrise Solutions Pvt. Ltd.)",
     designation: "Software Development Engineer - I, Frontend",
     location: "Hyderabad, India",
+    description: `Pragmatic Play is a leading content provider in the iGaming industry, known for its innovative and engaging gaming products. The company offers a diverse portfolio that includes online slots, live casino games, bingo, and virtual sports, catering to a global audience. Renowned for its high-quality graphics, immersive gameplay, and mobile-first design, Pragmatic Play consistently delivers standout experiences. With a commitment to innovation and player satisfaction, it launches new games regularly and ensures compliance with regulations across multiple jurisdictions. 
+                  Pragmatic Play has earned a reputation for excellence in creating entertainment that captivates players and drives engagement.`,
     companyLink: "https://www.pragmaticplay.com/en/#",
     duration: "12th July, 2023 - Ongoing Employment",
     projects: [
@@ -523,6 +519,7 @@ export const WorkDetails = [
         projectLink: ""
       },{
         projectName: "BlackJack 2.0 - Double After Split",
+        projectImageLink: "https://i.ytimg.com/vi/K_2GeL_zsv8/maxresdefault.jpg",
         timeLine: "May, 2024 - July,2024",
         techStackUsed:  [{
           techStack: "JavaScript",

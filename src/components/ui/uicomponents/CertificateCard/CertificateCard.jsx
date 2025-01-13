@@ -16,18 +16,23 @@ const CertificateCard = ({
 }) => {
   const [isLoading, setLoading] = useState(true);
   return (
-    <div className="flex flex-col rounded-xl transition-transform duration-300 overflow-y-hidden relative w-full h-[calc(100dvh_-_160px)] overflow-x-hidden gap-4 bg-indigo-400/50 py-2 px-4 shadow-lg">
+    <div className="flex flex-col rounded-xl transition-transform duration-300 overflow-y-hidden relative w-full h-[calc(100dvh_-_160px)] md:h-[40dvh] md:w-80 overflow-x-hidden gap-4 bg-indigo-400/50 py-2 px-4 shadow-lg">
       <CourseLinkFAB courseLink={courseLink} />
       <span className="flex flex-row w-full items-center font-bold text-xl gap-2">
         <IconFc name="udemy" width={40} height={40} />
-        <p>{instituteName} Certification</p>
+        <p
+          title={`${instituteName} Certification`}
+          className=" overflow-hidden text-ellipsis whitespace-nowrap"
+        >
+          {instituteName} Certification
+        </p>
       </span>
       <>
         <img
           className={`${
             certLink && !isLoading ? "block" : "hidden"
-          } max-h-64 rounded-lg`}
-          loading={"lazy"}
+          } max-h-64 min-h-60 rounded-lg`}
+          loading={"eager"}
           onLoad={() => setLoading(false)}
           src={certLink}
           alt={certificateName || "certificate"}
@@ -35,7 +40,12 @@ const CertificateCard = ({
         {(!certLink || isLoading) && <DefaultCertificate />}
       </>
       <div className="flex flex-col gap-2">
-        <p className="font-bold text-xl">{certificateName}</p>
+        <p
+          title={certificateName}
+          className="font-bold text-xl overflow-hidden text-ellipsis whitespace-nowrap"
+        >
+          {certificateName}
+        </p>
         <span className="flex flex-row items-center gap-4 text-sm font-semibold">
           <Date color="white" />
           <p>{date}</p>

@@ -17,7 +17,7 @@ const Navbar = () => {
   const [isDarkModeEnabled, setDarkModeEnabled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
-    <div className=" bg-transparent lg:bg-white/30 lg:backdrop-blur-sm lg:backdrop-saturate-200 lg:shadow-xl px-4 py-2 lg:px-0 lg:rounded-full lg:translate-y-[20px] lg:m-auto h-16 lg:h-20 lg:w-4/5 flex flex-row justify-between lg:justify-around items-center">
+    <div className=" relative z-10 bg-transparent lg:bg-white/30 lg:backdrop-blur-sm lg:backdrop-saturate-200 lg:shadow-xl px-4 py-2 lg:px-0 lg:rounded-full lg:translate-y-[20px] lg:m-auto h-16 lg:h-20 lg:w-4/5 flex flex-row justify-between lg:justify-around items-center">
       <div className=" font-extrabold flex flex-row items-center text-indigo-500 gap-3">
         <ProfilePictureImage />
         <p className="hidden md:block lg:hidden xl:block">Abhigyan Raha</p>
@@ -104,7 +104,7 @@ const Navbar = () => {
           isEnabled={isDarkModeEnabled}
           toggleSwitch={() => setDarkModeEnabled(!isDarkModeEnabled)}
         />
-        <ColorSwitch />
+        {/* <ColorSwitch /> */}
       </div>
     </div>
   );

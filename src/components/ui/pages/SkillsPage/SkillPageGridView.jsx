@@ -3,7 +3,7 @@ import SkillItem from "../../uicomponents/SkillItem/SkillItem";
 
 const SkillPageGridView = ({ skills = [] }) => {
   return (
-    <div className="w-full overflow-y-auto overflow-x-hidden flex flex-col gap-6 xl:gap-10 lg:w-4/5 lg:self-center xl:w-3/5 2xl:w-3/5 overflow-y-auto`">
+    <div className="w-full overflow-x-hidden flex flex-col gap-6 xl:gap-10 lg:w-4/5 lg:self-center xl:w-3/5 2xl:w-3/5 overflow-y-auto px-2">
       {skills?.skillList?.map((skillCategory, index) => {
         return (
           <div className="gap-3 flex flex-col" key={index}>

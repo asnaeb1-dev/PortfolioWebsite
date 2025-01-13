@@ -5,6 +5,7 @@ import {
 } from "react-icons/md";
 import { RxCross1 as CrossIcon } from "react-icons/rx";
 import ProjectCard from "./ProjectCard.jsx";
+import SmallSkillItem from "../SmallSkillItem/SmallSkillItem.jsx";
 
 // eslint-disable-next-line react/prop-types
 const CompanyDetails = ({ companyDetails = {}, handleClose }) => {
@@ -73,7 +74,11 @@ const CompanyDetails = ({ companyDetails = {}, handleClose }) => {
             <p className="text-2xl font-bold xl:text-3xl">Projects</p>
             <div className="flex flex-row gap-2">
               <span
-                onPointerUp={() => setCurrentProject(currentProject - 1)}
+                onPointerUp={() =>
+                  setCurrentProject(
+                    currentProject === 0 ? 0 : currentProject - 1
+                  )
+                }
                 title="Previous Project"
                 className="border-2 border-indigo-500 rounded-full p-1 items-center transition-transform hover:scale-105 active:scale-95"
               >
@@ -81,15 +86,48 @@ const CompanyDetails = ({ companyDetails = {}, handleClose }) => {
               </span>
               <span
                 title="Next Project"
-                onPointerUp={() => setCurrentProject(currentProject + 1)}
+                onPointerUp={() =>
+                  setCurrentProject(
+                    (currentProject + 1) % companyDetails.projects.length
+                  )
+                }
                 className="border-2 border-indigo-500 rounded-full p-1 items-center transition-transform hover:scale-105 active:scale-95"
               >
                 <NextIcon color="rgb(99 102 241)" />
               </span>
             </div>
           </span>
-          <div className="w-full h-full max-h[80%] rounded-xl bg-indigo-400/50 overflow-hidden p-4">
-            <img src={companyDetails.projects[currentProject]} />
+          <div className="w-full h-[40dvh] sm:h-[52dvh] rounded-xl bg-indigo-400/50 overflow-hidden p-4 flex flex-col gap-2">
+            <div className="w-full h-full relative">
+              <img
+                className="w-full h-full min-h-50 max-h-50 rounded-lg"
+                src={companyDetails.projects[currentProject].projectImageLink}
+              />
+              <div className="w-full h-full absolute flex justify-center items-center inset-0 rounded-xl bg-black/0 hover:bg-black/70">
+                <div className="h-1/2 sm:hidden flex flex-row flex-wrap justify-center items-center gap-2 overflow-y-auto ">
+                  {companyDetails.projects[currentProject].techStackUsed.map(
+                    ({ iconName }, index) => {
+                      return (
+                        <SmallSkillItem key={index} skillName={iconName} />
+                      );
+                    }
+                  )}
+                </div>
+              </div>
+            </div>
+            <p className="text-lg font-bold">
+              {companyDetails.projects[currentProject].projectName}
+            </p>
+            <p className="text-sm max-h-[100px] hidden sm:block overflow-y-scroll">
+              {companyDetails.projects[currentProject].projectSynopsis}
+            </p>
+            <div className="flex-row gap-2 hidden sm:flex flex-wrap overflow-y-auto">
+              {companyDetails.projects[currentProject].techStackUsed.map(
+                ({ iconName }, index) => {
+                  return <SmallSkillItem key={index} skillName={iconName} />;
+                }
+              )}
+            </div>
           </div>
         </div>
       </div>

@@ -192,7 +192,7 @@ const ProjectLayout = ({ projectList = [] }) => {
       </h1>
       <div
         className={
-          "w-full flex flex-col gap-4 p-4 mt-4 h-[72dvh] sm:h-[80dvh] md:h-[40dvh] lg:h-[42dvh] xl:h-[40dvh] 3xl:h-[50dvh] overflow-auto backdrop-blur-sm backdrop-saturate-150 shadow-xl rounded-xl linearGradientReverse"
+          "w-full flex flex-col gap-4 p-4 mt-4 h-[72dvh] sm:h-[80dvh] md:h-[40dvh] lg:h-[42dvh] xl:h-[48dvh] 3xl:h-[50dvh] overflow-auto backdrop-blur-sm backdrop-saturate-150 shadow-xl rounded-xl linearGradientReverse"
         }
       >
         <span className={`flex flex-row justify-between items-center`}>
