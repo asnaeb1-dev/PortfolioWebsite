@@ -709,3 +709,5 @@ export const AboutMeDescription = `Hey there! 👋 I’m a passionate software d
 Outside of work, I’m a gamer who’s always up for a good match and a coder who loves exploring new tech just for fun. I like to keep things lighthearted and believe that a mix of hard work, creativity, and a good sense of humor is the perfect recipe for success.
 
 If you’re here to connect, collaborate, or just check out my work, welcome to my portfolio! 😊`;
+
+export const CodingProfileGithub = `https://github.com/asnaeb1-dev/CodingPractice`;

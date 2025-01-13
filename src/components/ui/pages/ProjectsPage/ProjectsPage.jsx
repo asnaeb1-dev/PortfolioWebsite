@@ -8,6 +8,7 @@ import {
 } from "../../../data/api.js";
 import { useState, useEffect } from "react";
 import {
+  CodingProfileGithub,
   GFG_Link,
   LeetCode_Link,
   Projects,
@@ -90,7 +91,7 @@ const ProjectsPage = () => {
       className={`w-full h-[calc(100dvh_-_65px)] p-4 lg:px-0 overflow-hidden lg:h-[calc(100dvh_-_80px)] flex flex-col items-center pt-10`}
     >
       {/* mobile layout */}
-      <span className={`lg:hidden w-full flex items-center justify-between`}>
+      <span className={`md:hidden w-full flex items-center justify-between`}>
         <TabLayout
           currentTopic={currentTab}
           handleClick={(index) => setCurrentTab(index)}
@@ -103,7 +104,7 @@ const ProjectsPage = () => {
           <FaGithub size={20} />
         </span>
       </span>
-      <div className="block lg:hidden w-full">
+      <div className="block md:hidden w-full">
         {currentTab === 0 ? (
           <CodingLayout
             leetCodeProfile={leetcodeCodingProfileInfo}
@@ -114,7 +115,7 @@ const ProjectsPage = () => {
         )}
       </div>
       {/* Desktop layout */}
-      <div className="hidden lg:flex flex-col bg-white shadow-lg w-4/5 h-full mb-4 p-4 rounded-xl ">
+      <div className="hidden md:flex flex-col bg-white shadow-lg w-full lg:w-4/5 h-full mb-4 p-4 rounded-xl ">
         <div>
           <CodingLayout
             leetCodeProfile={leetcodeCodingProfileInfo}
@@ -133,17 +134,20 @@ const CodingLayout = ({ leetCodeProfile, gfgProfile }) => {
   return (
     <div className={`w-full overflow-hidden`}>
       <div
-        className={` hidden lg:flex flex-row w-full justify-between items-center`}
+        className={` hidden md:flex flex-row w-full justify-between items-center`}
       >
         <h1 className={"font-extrabold text-4xl py-2 lg:text-4xl"}>Coding</h1>
-        <span
+        <a
+          href={CodingProfileGithub}
           title={"GitHub"}
+          target="_blank"
+          rel="noopener noreferrer"
           className={`p-2 rounded-full transition-all border-2 hover:scale-110 hover:text-white hover:bg-indigo-500 text-indigo-500 border-indigo-500 cursor-pointer `}
         >
           <FaGithub size={20} />
-        </span>
+        </a>
       </div>
-      <div className="w-full md:w-1/4 h-10 rounded-xl mt-4 bg-indigo-400/40 text-sm font-semibold backdrop-saturate-200 px-4 justify-between flex items-center flex-row">
+      <div className="w-full lg:w-1/2 xl:w-1/4 h-10 rounded-xl mt-4 bg-indigo-400/40 text-sm font-semibold backdrop-saturate-200 px-4 justify-between flex items-center flex-row">
         <span className="flex flex-row gap-2 items-center">
           <span className="bg-red-500 rounded-md w-5 h-5"></span>
           <p>Hard</p>
@@ -182,13 +186,13 @@ const CodingLayout = ({ leetCodeProfile, gfgProfile }) => {
 const ProjectLayout = ({ projectList = [] }) => {
   const [currentProjectTopic, setCurrentProjectTopic] = useState(0);
   return (
-    <div className={`mb-4 w-full lg:block`}>
-      <h1 className={"font-extrabold py-2 hidden lg:block lg:text-4xl"}>
+    <div className={`mb-4 w-full md:block`}>
+      <h1 className={"font-extrabold py-2 hidden md:block md:text-4xl"}>
         Projects
       </h1>
       <div
         className={
-          "w-full flex flex-col gap-4 p-4 mt-4 h-[80dvh] lg:h-[45dvh] xl:h-[50dvh] overflow-auto backdrop-blur-sm backdrop-saturate-150 shadow-xl rounded-xl linearGradientReverse"
+          "w-full flex flex-col gap-4 p-4 mt-4 h-[72dvh] sm:h-[80dvh] md:h-[40dvh] lg:h-[42dvh] xl:h-[40dvh] 3xl:h-[50dvh] overflow-auto backdrop-blur-sm backdrop-saturate-150 shadow-xl rounded-xl linearGradientReverse"
         }
       >
         <span className={`flex flex-row justify-between items-center`}>

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { HiOutlineMenu as HamburgerMenuIcon } from "react-icons/hi";
 import { Links, NavBarStrings } from "../../../data/strings";
 
@@ -10,22 +10,16 @@ import DayNightSwitch from "../DayNightSwitch/DayNightSwitch";
 import "./navbar.css";
 import MobileMenu from "../MobileMenu/MobileMenu.jsx";
 import ColorSwitch from "../ColorSwitch/ColorSwitch.jsx";
+import useClickedOutside from "../../../data/CustomHooks/useClickedOutside/useClickedOutside.jsx";
 
 const Navbar = () => {
   const location = useLocation();
   const [isDarkModeEnabled, setDarkModeEnabled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <div className=" bg-transparent lg:bg-white/30 lg:backdrop-blur-sm lg:backdrop-saturate-200 lg:shadow-xl px-4 py-2 lg:px-0 lg:rounded-full lg:translate-y-[20px] lg:m-auto h-16 lg:h-20 lg:w-4/5 flex flex-row justify-between lg:justify-around items-center">
       <div className=" font-extrabold flex flex-row items-center text-indigo-500 gap-3">
-        <img
-          alt={"My Avatar"}
-          src={ProfilePicture}
-          width={40}
-          height={40}
-          className=" object-cover bg-white p-0.5 lg:p-0 aspect-square rounded-full cursor-pointer hover:scale-110 transition-transform"
-        />
+        <ProfilePictureImage />
         <p className="hidden md:block lg:hidden xl:block">Abhigyan Raha</p>
       </div>
       <div>
@@ -98,7 +92,9 @@ const Navbar = () => {
           {isMenuOpen && (
             <MobileMenu
               isDarkModeEnabled={isDarkModeEnabled}
+              isMenuOpen={isMenuOpen}
               toggleSwitch={() => setDarkModeEnabled(!isDarkModeEnabled)}
+              clickedOutside={() => setIsMenuOpen(false)}
             />
           )}
         </div>
@@ -110,6 +106,43 @@ const Navbar = () => {
         />
         <ColorSwitch />
       </div>
+    </div>
+  );
+};
+
+const ProfilePictureImage = () => {
+  const [isProfileOpen, setProfileOpen] = useState(false);
+  const profileImageRef = useRef();
+  const isClickedOutside = useClickedOutside(profileImageRef, isProfileOpen);
+
+  useEffect(() => {
+    if (isClickedOutside) {
+      setProfileOpen(false);
+    }
+  }, [isClickedOutside]);
+
+  return (
+    <div className="relative z-20">
+      <img
+        ref={profileImageRef}
+        alt={"My Avatar"}
+        src={ProfilePicture}
+        width={40}
+        height={40}
+        onPointerUp={() => setProfileOpen(!isProfileOpen)}
+        className={` object-cover bg-white p-0.5 lg:p-0 ${
+          isProfileOpen && "rounded-bl-none"
+        } aspect-square rounded-full cursor-pointer hover:scale-110 transition-transform`}
+      />
+      {isProfileOpen && (
+        <div className="absolute w-36 h-36 xl:w-52 xl:h-52 bg-black/40 z-20 top-12 rounded-full rounded-tl-none p-2">
+          <img
+            alt={"My Avatar"}
+            src={ProfilePicture}
+            className="object-cover bg-white aspect-square rounded-full w-full h-full"
+          />
+        </div>
+      )}
     </div>
   );
 };
