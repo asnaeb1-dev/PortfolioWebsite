@@ -87,6 +87,7 @@ const IntroductionPage = () => {
           >
             {showAboutMe ? (
               <AboutMe
+                isOpen={showAboutMe}
                 aboutMeText={AboutMeDescription}
                 closeAboutMe={() => setShowAboutMe(false)}
               />
