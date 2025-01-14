@@ -1,0 +1,29 @@
+.my-container {
+  overflow: auto; /* Enable scrolling */
+}
+
+.appear {
+  animation: appear 0.5s ease-in-out forwards;
+}
+
+.disappear {
+  animation: disappear 0.5s ease-in-out forwards;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(-500px);
+  }
+
+  to {
+    transform: translateY(0px);
+  }
+}
+.my-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+}
+
+.my-container {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer */
+}

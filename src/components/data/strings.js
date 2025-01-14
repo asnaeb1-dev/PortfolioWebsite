@@ -20,8 +20,8 @@ export const Links = {
 
 
 export const PersonalityList = [
-    "Software Engineer.",
-    "Fullstack Developer.",
+    "Software Dev.",
+    "Fullstack Dev.",
     "UI/UX Designer.",
     "Frontend Developer.",
     "Gamer.",
