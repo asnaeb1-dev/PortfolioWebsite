@@ -29,6 +29,25 @@
 .moving {
     animation: bouncing 2s ease 0.1s infinite forwards;
 }   
+
+.animate-move {
+    animation: move-left 3s ease 0.1s infinite forwards;
+}
+
+@keyframes move-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    50% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
 @keyframes bouncing {
     0%, 100% {
         transform: translateY(-3%);
@@ -40,9 +59,6 @@
     }
 }
 
-.moving:hover {
-    transform: scale(1.15);  /* Shadow grows on hover */
-}
 
 .tooltip::after {
     content: "";
