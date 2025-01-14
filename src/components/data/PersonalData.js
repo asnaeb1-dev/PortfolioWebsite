@@ -701,10 +701,11 @@ export const CertificationList = [
   }
 ]
 
-export const AboutMeDescription = `Hey there! 👋 I’m a passionate software developer with 4 years of experience, specializing in web development. Over the years, I’ve had the opportunity to work with three amazing companies, where I honed my skills and developed a variety of web applications. Whether it’s crafting sleek UIs or solving complex coding challenges, I love bringing ideas to life on the web.
+export const AboutMeDescription = `Hey there! 👋
+I’m a web developer with ${new Date().getFullYear() - 2021} years of experience turning ideas into sleek, functional web apps. I’ve worked with three fantastic companies, sharpening my skills and solving tricky coding puzzles along the way.
 
-Outside of work, I’m a gamer who’s always up for a good match and a coder who loves exploring new tech just for fun. I like to keep things lighthearted and believe that a mix of hard work, creativity, and a good sense of humor is the perfect recipe for success.
+When I’m not crafting UIs or squashing bugs, you’ll find me gaming, geeking out over new tech, or chasing fun coding challenges. Hard work + creativity + humor = my formula for success!
 
-If you’re here to connect, collaborate, or just check out my work, welcome to my portfolio! 😊`;
+Welcome to my portfolio—let’s build something awesome together! 😊`;
 
 export const CodingProfileGithub = `https://github.com/asnaeb1-dev/CodingPractice`;

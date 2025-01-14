@@ -1,0 +1,12 @@
+.my-container {
+  overflow: auto; /* Enable scrolling */
+}
+
+.my-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+}
+
+.my-container {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer */
+}
