@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import useClickedOutside from "../../../data/CustomHooks/useClickedOutside/useClickedOutside";
+import useClickedOutside from "../../../data/CustomHooks/useClickedOutside";
 import { IconFc } from "../../../data/Icons";
 import "./aboutme.css";
 

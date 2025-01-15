@@ -34,7 +34,6 @@ const IntroductionPage = () => {
   }, []);
 
   return (
-    <>
       <div className="h-[calc(100dvh_-_77px)] md:h-[calc(100dvh_-_60px)] w-4/5 mx-auto lg:h-[calc(100dvh_-_80px)] flex flex-col-reverse lg:flex-row overflow-hidden">
         <div className="flex-1 flex flex-col justify-center items-center">
           <h1 className="text-[25px] text-center md:text-[35px] lg:text-start lg:text-[50px] xl:text-[80px] font-extrabold w-3/5">
@@ -97,8 +96,6 @@ const IntroductionPage = () => {
           </div>
         </div>
       </div>
-      <BackgroundParticles />
-    </>
   );
 };
 

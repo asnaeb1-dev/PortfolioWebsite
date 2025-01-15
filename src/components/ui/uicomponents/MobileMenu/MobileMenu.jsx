@@ -2,7 +2,7 @@ import DayNightSwitch from "../DayNightSwitch/DayNightSwitch.jsx";
 import { Link, useLocation } from "react-router-dom";
 import { Links, NavBarStrings } from "../../../data/strings.js";
 import "./mobilemenu.css";
-import useClickedOutside from "../../../data/CustomHooks/useClickedOutside/useClickedOutside.jsx";
+import useClickedOutside from "../../../data/CustomHooks/useClickedOutside.jsx";
 import { useEffect, useRef } from "react";
 
 function MobileMenu({

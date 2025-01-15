@@ -10,7 +10,7 @@ import DayNightSwitch from "../DayNightSwitch/DayNightSwitch";
 import "./navbar.css";
 import MobileMenu from "../MobileMenu/MobileMenu.jsx";
 import ColorSwitch from "../ColorSwitch/ColorSwitch.jsx";
-import useClickedOutside from "../../../data/CustomHooks/useClickedOutside/useClickedOutside.jsx";
+import useClickedOutside from "../../../data/CustomHooks/useClickedOutside.jsx";
 
 const Navbar = () => {
   const location = useLocation();
