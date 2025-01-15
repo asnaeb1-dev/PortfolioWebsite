@@ -11,6 +11,7 @@ const WorkExPath = ({ workExperience = [], onclick }) => {
           return (
             <IndividualWorkExPath
               index={index}
+              key={index}
               begin={currentPosition === index}
               end={index === workExperience.length - 1}
               isDone={() => setCurrentPosition(currentPosition + 1)}

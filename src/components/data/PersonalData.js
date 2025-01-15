@@ -328,6 +328,7 @@ export const WorkExperience = {
   title: "Work Experience",
   workList: [
     {
+      index: 1,
       companyName: "ValueLabs LLP",
       companyLink: "https://www.valuelabs.com/",
       designation: "Software Engineer - Intern",
@@ -336,6 +337,7 @@ export const WorkExperience = {
       location: "Hyderabad, India",
       description: "I have been working on various projects."
     },{
+      index: 2,
       companyName: "ValueLabs LLP",
       companyLink: "https://www.valuelabs.com/",
       designation: "Software Engineer",
@@ -344,6 +346,7 @@ export const WorkExperience = {
       location: "Hyderabad, India",
       description: "I have been working on various projects. "
     },{
+      index: 2,
       companyName: "Reputation",
       companyLink: "https://reputation.com/",
       designation: "Software Engineer - Frontend",
@@ -352,6 +355,7 @@ export const WorkExperience = {
       timeSpan: "8 months",
       description: "I have been working on various projects."
     },{
+      index: 3,
       companyName: "PragmaticPlay (Arrise Solutions Pvt. Ltd.)",
       companyLink: "https://www.pragmaticplay.com/en/#",
       designation: "SDE - Frontend",
@@ -360,6 +364,7 @@ export const WorkExperience = {
       location: "Hyderabad, India",
       description: "I have been working on various projects. "
     },{
+      index: 4,
       timeSpan: "Currently working here",
     }
   ]

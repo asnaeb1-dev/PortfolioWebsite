@@ -17,3 +17,61 @@
     background: linear-gradient(225deg, rgb(129, 140, 248, 0.4), rgba(255,0,0,0) 80.71%);
 }
 
+.hidden-scrollbar {
+    overflow: auto; /* Enable scrolling functionality */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  }
+
+  .hidden-scrollbar::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Webkit browsers */
+  }
+
+  .animateOpenMobile {
+    animation: animateOpen 0.7s forwards ease-in-out;
+  }
+  
+  @keyframes animateOpen {
+    from {
+      height: 0px;
+      overflow: hidden;
+    }
+  
+    to {
+      height: calc(100vh - 70px);
+      overflow: auto;
+    }
+  }
+  
+  .animateOpenDesktop {
+    animation: animateOpenDesktop 0.7s forwards ease-in-out;
+  }
+  
+  @keyframes animateOpenDesktop {
+    from {
+      width: 0px;
+      overflow: hidden;
+    }
+  
+    to {
+      width: 50%;
+      overflow: auto;
+    }
+  }
+  
+  .animateCloseMobile {
+    animation: animateClose 0.7s forwards ease-in-out;
+  }
+  
+  @keyframes animateClose {
+    from  {
+      height: calc(100vh - 70px);
+    }
+  
+    to {
+      height: 0px;
+      overflow: hidden;
+    }
+  }
+  
+
