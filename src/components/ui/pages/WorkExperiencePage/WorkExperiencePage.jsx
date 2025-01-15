@@ -18,7 +18,7 @@ const WorkExperiencePage = () => {
   }, [clickedWorkExperience]);
 
   return (
-    <div className="h-[calc(100vh_-_60px)] overflow-hidden relative p-4 pl-0 flex flex-row lg:w-4/5 lg:mx-auto lg:pt-8">
+    <div className="h-[calc(100dvh_-_60px)] overflow-hidden relative p-4 pl-0 flex flex-row lg:w-4/5 lg:mx-auto lg:pt-8">
       <div className="flex flex-col justify-center flex-1">
         <h1 className="font-extrabold text-3xl pb-2 pl-4 lg:text-4xl">
           Work Experience

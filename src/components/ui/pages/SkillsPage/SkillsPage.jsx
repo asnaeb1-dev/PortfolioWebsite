@@ -12,7 +12,7 @@ const SkillsPage = () => {
   }, [isGridView]);
 
   return (
-    <div className="h-[calc(100dvh_-_64px)] overflow-hidden p-4 lg:pt-12 flex flex-col gap-2 w-full lg:w-4/5  mx-auto ">
+    <div className="h-[calc(100dvh_-_64px)] lg:h-[calc(100dvh_-_80px)] overflow-hidden p-4 lg:pt-12 flex flex-col gap-2 w-full lg:w-4/5  mx-auto ">
       <div className="xsm:text-[30px] w-full sm:text-[40px] font-extrabold flex flex-row justify-between items-center">
         <p className="w-full text-md">Skills</p>
         <GridSwitch

@@ -4,7 +4,7 @@
   cursor: pointer;
   transition: all;
   border-radius: 0.5rem;
-  transition-duration: 500ms;
+  transition-duration: 200ms;
 }
 
 .animateWindowOpen {
