@@ -4,94 +4,18 @@ import TabLayout from "../../uicomponents/ProjectTabs/TabLayout";
 import CollegeImage from "../../../assets/college.jpeg";
 import SchoolImage from "../../../assets/school.jpeg";
 import CertificateCard from "../../uicomponents/CertificateCard/CertificateCard";
-import { CertificationList } from "../../../data/PersonalData";
 
-import { MdNavigateNext as NextIcon } from "react-icons/md";
 
 import "./educationpage.css";
 
 const EducationPage = () => {
-  const [currentTab, setCurrentTab] = useState(0);
-  const [certificateIndex, setCertificateIndex] = useState(0);
   return (
     <div
       className={
         "w-full lg:w-4/5 lg:m-auto h-[calc(100vh_-_60px)] pt-6 overflow-hidden"
       }
     >
-      <div className="w-full h-full px-4 flex flex-col gap-2 lg:pb-4">
-        <span className="flex flex-row justify-between items-center">
-          <span className="block md:hidden">
-            <TabLayout
-              tabList={["Education", "Certifications"]}
-              currentTopic={currentTab}
-              handleClick={(index) => setCurrentTab(index)}
-            />
-          </span>
-          <span
-            title="Next Certification"
-            onPointerUp={() =>
-              setCertificateIndex(
-                (certificateIndex + 1) % CertificationList.length
-              )
-            }
-            className={`border-2 border-indigo-500 md:hidden rounded-full ${
-              currentTab === 0 ? "hidden" : "block"
-            } p-1 transition-transform hover:scale-105 active:scale-95`}
-          >
-            <NextIcon color="rgb(99 102 241)" />
-          </span>
-        </span>
-        <div className="block md:hidden w-full h-full mb-4">
-          {currentTab === 0 ? (
-            <EducationTab />
-          ) : (
-            <CertificationTab
-              certificate={CertificationList[certificateIndex]}
-            />
-          )}
-        </div>
-        <div className="hidden md:flex flex-col w-full gap-3 h-full mb-4 rounded-lg">
-          <div className="w-full flex-1">
-            <EducationTabHorizontal />
-          </div>
-          <div className="w-full flex-1 flex flex-col gap-5 bg-white shadow-xl rounded-xl p-4">
-            <p className="text-3xl font-bold">Certifications</p>
-            <div className="grid grid-rows-1 grid-flow-col gap-7 overflow-x-auto scroll-smooth pb-2">
-              {CertificationList.map(
-                (
-                  {
-                    certificateName,
-                    certLink,
-                    courseLink,
-                    institution,
-                    date,
-                    duration,
-                    coachName,
-                  },
-                  index
-                ) => {
-                  return (
-                    <CertificateCard
-                      key={index}
-                      certificateName={certificateName}
-                      certLink={certLink}
-                      courseLink={courseLink}
-                      instituteName={institution}
-                      duration={duration}
-                      date={date}
-                      index={index}
-                      coachName={coachName}
-                      certificateIndex={certificateIndex}
-                      setCertificateIndex={setCertificateIndex}
-                    />
-                  );
-                }
-              )}
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };
