@@ -8,7 +8,7 @@ const SkillsAccordian = ({ skills = [] }) => {
   const [expandedItem, setExpandedItem] = useState(-1);
 
   return (
-    <div className="w-full flex flex-col gap-2 md:w-4/5 self-center lg:w-3/5 2xl:w-1/2 ">
+    <div className="w-full lg:w-4/5 px-4 pb-4 pt-2 lg:pb-7 overflow-x-hidden flex flex-col gap-3 lg:self-center">
       {skills?.skillList?.map((skillType, index) => {
         return (
           <AccordianItem

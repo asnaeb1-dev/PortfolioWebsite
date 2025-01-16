@@ -31,6 +31,10 @@ export const Skills = {
           skillName: "TypeScript",
           iconName: IconName.TYPESCRIPT,
           progress: 75
+        }, {
+          skillName: "C Programming",
+          iconName: IconName.C_PROG,
+          progress: 30
         }
       ]
     }, {
