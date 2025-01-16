@@ -25,10 +25,12 @@ const ResumePage = () => {
 
   return (
     <div
-      className={`w-full h-[calc(100dvh_-_85px)] p-4 lg:w-4/5 lg:h-[calc(100dvh_-_90px)] mx-auto mt-4`}
+      className={
+        "w-full flex flex-col items-center justify-center h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_100px)] lg:mt-8 overflow-hidden"
+      }
     >
-      <div className="w-full h-full relative lg:p-4 flex flex-col justify-center items-center gap-5">
-        <div className="flex flex-row w-full lg:w-4/5 justify-between items-center">
+      <div className="w-full lg:w-4/5 h-full flex flex-col gap-5 lg:mb-6 p-4 lg:p-6 lg:bg-white/30 backdrop-blur-sm shadow-xl lg:rounded-2xl">
+        <div className="flex flex-row w-full justify-between items-center">
           <h1 className="text-4xl lg:text-5xl font-extrabold">Resume</h1>
           <DownloadButton downloadLink={DownloadLink} />
         </div>
@@ -38,12 +40,12 @@ const ResumePage = () => {
           onError={(e) => setError(e)}
           onLoad={() => setLoading(false)}
           src={ResumeLink}
-          className={`w-full lg:w-4/5 h-full transition-opacity rounded-2xl duration-700`}
+          className={`w-full h-full transition-opacity rounded-2xl duration-700`}
         ></iframe>
         <div
           className={`absolute ${
             isLoading && !hasError ? "block" : "hidden"
-          } top-1/2 font-extrabold`}
+          } top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-extrabold`}
         >
           {hasError ? "Error... Please reload" : "Loading..."}
         </div>
