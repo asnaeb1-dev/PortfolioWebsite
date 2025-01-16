@@ -4,10 +4,10 @@ const DownloadButton = ({ downloadLink = "" }) => {
   return (
     <a
       href={downloadLink}
-      className="border-2 relative transition-transform cursor-pointer active:scale-100 hover:scale-[102%] rounded-full p-2 lg:p-3 border-indigo-400 flex flex-row justify-between items-start gap-5"
+      className="relative transition-transform backdrop-blur-lg cursor-pointer active:scale-95 hover:scale-105 rounded-full p-2 lg:py-3 lg:px-5 hover:bg-indigo-500/20  flex flex-row justify-between items-start gap-5"
     >
       <p className={`text-sm text-indigo-500 font-bold hidden lg:block`}>
-        Download Resume
+        Download
       </p>
       <DownloadIcon size={20} color="rgb(99 102 241)" />
       <div className="absolute z-[-1] bg-indigo-500/20 w-full h-full inset-0 rounded-full"></div>
