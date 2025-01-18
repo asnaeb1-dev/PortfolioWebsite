@@ -2,6 +2,8 @@
 import SuperheroAppImage from "../assets/supehero.png";
 import TaskrAppIcon from "../assets/taskrapp.png";
 import ReactComponent from "../assets/components.png";
+import DSAIcon from "../assets/dsa.png";
+import SwiggyImage from "../assets/swiggy.png";
 import { IconName } from "./Icons";
 
 export const LeetCode_Link = `https://leetcode.com/u/abhigyanrahawork76/`;
@@ -31,6 +33,10 @@ export const Skills = {
           skillName: "TypeScript",
           iconName: IconName.TYPESCRIPT,
           progress: 75
+        }, {
+          skillName: "C Programming",
+          iconName: IconName.C_PROG,
+          progress: 30
         }
       ]
     }, {
@@ -224,110 +230,52 @@ export const Projects =  [
     githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
   },
   {
-    title: "React Components",
-    projectImage: ReactComponent,
-    description: "This is a React app that contains all the components that I have built for various projects and can be used.",
+    title: "DSA Practice",
+    projectImage: DSAIcon,
+    description: "This is a project where I solve and accumulate DSA questions.",
     link: "",
     iconName: IconName.HTML5,
     techStack: [{
-      skillName: "React",
-      iconName: IconName.REACT,
-    },{
-      skillName: "HTML",
-      iconName: IconName.HTML5,
-    },{
-      skillName: "CSS",
-      iconName: IconName.CSS3,
+      skillName: "Java",
+      iconName: IconName.JAVA,
     }, {
       skillName: "JavaScript",
       iconName: IconName.JAVASCRIPT,
-    }, {
-      skillName: "TypeScript",
-      iconName: IconName.TYPESCRIPT,
     }
     ],
-    githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
+    githubLink: `https://github.com/asnaeb1-dev/CodingPractice`
   },
   {
-    title: "React Components",
-    projectImage: ReactComponent,
-    description: "This is a React app that contains all the components that I have built for various projects and can be used.",
+    title: "Swiggy Clone",
+    projectImage: SwiggyImage,
+    description: "This is a project where I solve and accumulate DSA questions.",
     link: "",
     iconName: IconName.HTML5,
     techStack: [{
       skillName: "React",
       iconName: IconName.REACT,
-    },{
-      skillName: "HTML",
-      iconName: IconName.HTML5,
-    },{
-      skillName: "CSS",
-      iconName: IconName.CSS3,
     }, {
       skillName: "JavaScript",
       iconName: IconName.JAVASCRIPT,
     }, {
       skillName: "TypeScript",
       iconName: IconName.TYPESCRIPT,
-    }
-    ],
-    githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
-  },
-  {
-    title: "React Components",
-    projectImage: ReactComponent,
-    description: "This is a React app that contains all the components that I have built for various projects and can be used.",
-    link: "",
-    iconName: IconName.HTML5,
-    techStack: [{
-      skillName: "React",
-      iconName: IconName.REACT,
-    },{
-      skillName: "HTML",
-      iconName: IconName.HTML5,
-    },{
-      skillName: "CSS",
-      iconName: IconName.CSS3,
+    }, {
+      skillName: "Redux",
+      iconName: IconName.REDUX,
     }, {
       skillName: "JavaScript",
       iconName: IconName.JAVASCRIPT,
-    }, {
-      skillName: "TypeScript",
-      iconName: IconName.TYPESCRIPT,
     }
     ],
-    githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
-  },
-  {
-    title: "React Components",
-    projectImage: ReactComponent,
-    description: "This is a React app that contains all the components that I have built for various projects and can be used.",
-    link: "",
-    iconName: IconName.HTML5,
-    techStack: [{
-      skillName: "React",
-      iconName: IconName.REACT,
-    },{
-      skillName: "HTML",
-      iconName: IconName.HTML5,
-    },{
-      skillName: "CSS",
-      iconName: IconName.CSS3,
-    }, {
-      skillName: "JavaScript",
-      iconName: IconName.JAVASCRIPT,
-    }, {
-      skillName: "TypeScript",
-      iconName: IconName.TYPESCRIPT,
-    }
-    ],
-    githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
+    githubLink: `https://github.com/asnaeb1-dev/SwiggyClone`
   }
 ]
 export const WorkExperience = {
   title: "Work Experience",
   workList: [
     {
+      index: 1,
       companyName: "ValueLabs LLP",
       companyLink: "https://www.valuelabs.com/",
       designation: "Software Engineer - Intern",
@@ -336,6 +284,7 @@ export const WorkExperience = {
       location: "Hyderabad, India",
       description: "I have been working on various projects."
     },{
+      index: 2,
       companyName: "ValueLabs LLP",
       companyLink: "https://www.valuelabs.com/",
       designation: "Software Engineer",
@@ -344,6 +293,7 @@ export const WorkExperience = {
       location: "Hyderabad, India",
       description: "I have been working on various projects. "
     },{
+      index: 2,
       companyName: "Reputation",
       companyLink: "https://reputation.com/",
       designation: "Software Engineer - Frontend",
@@ -352,6 +302,7 @@ export const WorkExperience = {
       timeSpan: "8 months",
       description: "I have been working on various projects."
     },{
+      index: 3,
       companyName: "PragmaticPlay (Arrise Solutions Pvt. Ltd.)",
       companyLink: "https://www.pragmaticplay.com/en/#",
       designation: "SDE - Frontend",
@@ -360,6 +311,7 @@ export const WorkExperience = {
       location: "Hyderabad, India",
       description: "I have been working on various projects. "
     },{
+      index: 4,
       timeSpan: "Currently working here",
     }
   ]

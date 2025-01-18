@@ -1,10 +1,32 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 // import { loadAll } from "@tsparticles/all"; // if you are going to use `loadAll`, install the "@tsparticles/all" package too.
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
+import { useTheme } from "../../../data/Context/ThemeContext";
 const BackgroundParticles = () => {
-    const [init, setInit] = useState(false);
+  const [init, setInit] = useState(false);
+  const { isDarkModeEnabled } = useTheme();
+  const [styles, setStyles] = useState({
+    blobColor: "rgb(99, 102, 241)",
+    lineColor: "rgb(99, 102, 241)",
+    bgColor: "rgb(255, 255, 255)",
+  });
+  useEffect(() => {
+    if (isDarkModeEnabled) {
+      setStyles({
+        blobColor: "rgb(150, 120, 255)",
+        lineColor: "rgb(150, 120, 255)",
+        bgColor: "#1a1a1a",
+      });
+    } else {
+      setStyles({
+        blobColor: "rgb(99, 102, 241)",
+        lineColor: "rgb(99, 102, 241)",
+        bgColor: "rgb(255, 255, 255)",
+      });
+    }
+  }, [isDarkModeEnabled]);
 
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -19,7 +41,7 @@ const BackgroundParticles = () => {
     }).then(() => {
       setInit(true);
     });
-  }, []);
+  }, [isDarkModeEnabled]);
 
   const particlesLoaded = (container) => {
     console.log(container);
@@ -28,9 +50,10 @@ const BackgroundParticles = () => {
   const options = useMemo(
     () => ({
       background: {
-        color: {
-          value: "white",
-        },
+        color: `${styles.bgColor}`,
+        position: "50% 50%",
+        repeat: "no-repeat",
+        size: "cover",
       },
       fpsLimit: 120,
       interactivity: {
@@ -56,10 +79,10 @@ const BackgroundParticles = () => {
       },
       particles: {
         color: {
-          value: "rgb(99, 102, 241)",
+          value: `${styles.blobColor}`,
         },
         links: {
-          color: "rgb(99, 102, 241)",
+          color: `${styles.lineColor}`,
           distance: 150,
           enable: true,
           opacity: 0.5,
@@ -93,12 +116,12 @@ const BackgroundParticles = () => {
       },
       detectRetina: true,
     }),
-    [],
+    []
   );
 
   if (init) {
     return (
-      <div className=' absolute z-[-1] h-[calc(100%_-_80px)] '>
+      <div className=" absolute z-[-1] h-[calc(100%_-_80px)] ">
         <Particles
           id="tsparticles"
           particlesLoaded={particlesLoaded}
@@ -110,5 +133,5 @@ const BackgroundParticles = () => {
 
   return <></>;
 };
-  
-export default BackgroundParticles
+
+export default BackgroundParticles;

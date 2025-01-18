@@ -16,7 +16,7 @@ import {
 import TabLayout from "../../uicomponents/ProjectTabs/TabLayout.jsx";
 import ProjectItem from "../../uicomponents/ProjectItem/ProjectItem.jsx";
 
-import { MdNavigateNext as NextProjectIcon } from "react-icons/md";
+import { RxReset as ResetIcon } from "react-icons/rx";
 import { IconFc, IconName } from "../../../data/Icons.jsx";
 
 const ProjectsPage = () => {
@@ -88,42 +88,45 @@ const ProjectsPage = () => {
 
   return (
     <div
-      className={`w-full h-[calc(100dvh_-_65px)] p-4 lg:px-0 overflow-hidden lg:h-[calc(100dvh_-_80px)] flex flex-col items-center pt-10`}
+      className={
+        "w-full flex flex-col items-center justify-center h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_100px)] mt-4 lg:mt-8 overflow-hidden"
+      }
     >
-      {/* mobile layout */}
-      <span className={`md:hidden w-full flex items-center justify-between`}>
-        <TabLayout
-          currentTopic={currentTab}
-          handleClick={(index) => setCurrentTab(index)}
-          tabList={["Coding", "Projects"]}
-        />
-        <span
-          title={"GitHub"}
-          className={`p-2 rounded-full transition-all border-2 hover:scale-110 hover:text-white hover:bg-indigo-500 text-indigo-500 border-indigo-500 cursor-pointer `}
-        >
-          <FaGithub size={20} />
-        </span>
-      </span>
-      <div className="block md:hidden w-full">
-        {currentTab === 0 ? (
-          <CodingLayout
-            leetCodeProfile={leetcodeCodingProfileInfo}
-            gfgProfile={gfgCodingProfileInfo}
-          />
-        ) : (
-          <ProjectLayout projectList={Projects} />
-        )}
-      </div>
-      {/* Desktop layout */}
-      <div className="hidden md:flex flex-col bg-white shadow-lg w-full lg:w-4/5 h-full mb-4 p-4 rounded-xl ">
-        <div>
-          <CodingLayout
-            leetCodeProfile={leetcodeCodingProfileInfo}
-            gfgProfile={gfgCodingProfileInfo}
+      <div className="w-full lg:w-4/5 h-full lg:mb-6  lg:bg-white/30 backdrop-blur-sm shadow-xl lg:rounded-2xl">
+        <div className="w-full lg:hidden px-4">
+          <TabLayout
+            currentTopic={currentTab}
+            handleClick={(index) => setCurrentTab(index)}
+            tabList={["Coding", "Projects"]}
           />
         </div>
-        <div>
-          <ProjectLayout projectList={Projects} />
+        <div className="md:flex flex-col bg-white/30 mt-3 lg:mt-0 shadow-lg w-full h-full p-4 rounded-xl ">
+          {/* Mobile layout */}
+          <span
+            className={`${currentTab === 0 ? "block lg:hidden" : "hidden"}`}
+          >
+            <CodingLayout
+              leetCodeProfile={leetcodeCodingProfileInfo}
+              gfgProfile={gfgCodingProfileInfo}
+            />
+          </span>
+          <span
+            className={`${currentTab === 1 ? "block lg:hidden" : "hidden"}`}
+          >
+            <ProjectLayout projectList={Projects} />
+          </span>
+          {/* Desktop layout */}
+          <div className="hidden lg:flex flex-col h-full w-full">
+            <div className="w-full">
+              <CodingLayout
+                leetCodeProfile={leetcodeCodingProfileInfo}
+                gfgProfile={gfgCodingProfileInfo}
+              />
+            </div>
+            <div className="w-full h-full">
+              <ProjectLayout projectList={Projects} />
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -131,12 +134,19 @@ const ProjectsPage = () => {
 };
 
 const CodingLayout = ({ leetCodeProfile, gfgProfile }) => {
+  const [difficulty, setDifficulty] = useState(-1);
   return (
     <div className={`w-full overflow-hidden`}>
       <div
-        className={` hidden md:flex flex-row w-full justify-between items-center`}
+        className={`hidden lg:flex flex-row w-full justify-between pr-2 items-center`}
       >
-        <h1 className={"font-extrabold text-4xl py-2 lg:text-4xl"}>Coding</h1>
+        <h1
+          className={
+            "hidden lg:block font-extrabold p-2 pb-4 text-4xl lg:text-6xl"
+          }
+        >
+          Coding.
+        </h1>
         <a
           href={CodingProfileGithub}
           title={"GitHub"}
@@ -147,38 +157,65 @@ const CodingLayout = ({ leetCodeProfile, gfgProfile }) => {
           <FaGithub size={20} />
         </a>
       </div>
-      <div className="w-full lg:w-1/2 xl:w-1/4 h-10 rounded-xl mt-4 bg-indigo-400/40 text-sm font-semibold backdrop-saturate-200 px-4 justify-between flex items-center flex-row">
-        <span className="flex flex-row gap-2 items-center">
-          <span className="bg-red-500 rounded-md w-5 h-5"></span>
-          <p>Hard</p>
-        </span>
-        <span className="flex flex-row gap-2 items-center">
-          <span className=" bg-orange-500 rounded-md w-5 h-5"></span>
-          <p>Medium</p>
-        </span>
-        <span className="flex flex-row gap-2 items-center">
-          <span className="bg-emerald-500 rounded-md w-5 h-5"></span>
-          <p>Easy</p>
-        </span>
+      <div className="flex flex-col gap-5 w-full">
+        <DifficultySelector
+          onSelect={(difficulty) => setDifficulty(difficulty)}
+        />
+        <div
+          className={`w-full h-[62dvh] lg:h-full pb-5 flex flex-col lg:flex-row gap-5 overflow-y-auto`}
+        >
+          <CodingCard
+            link={LeetCode_Link}
+            profile={"LeetCode"}
+            difficulty={difficulty}
+            codingData={leetCodeProfile}
+          >
+            <IconFc name={IconName.LEETCODE} width={20} height={20} />
+          </CodingCard>
+          <CodingCard
+            link={GFG_Link}
+            profile={"GeeksForGeeks"}
+            codingData={gfgProfile}
+            difficulty={difficulty}
+          >
+            <IconFc name={IconName.GFG} width={24} height={24} />
+          </CodingCard>
+        </div>
       </div>
-      <div
-        className={`w-full h-full grid grid-cols-1 md:grid-cols-2 gap-10 my-5 overflow-y-auto`}
+    </div>
+  );
+};
+
+const DifficultySelector = ({ onSelect }) => {
+  return (
+    <div className="w-full lg:w-1/2 3xl:w-1/3 h-10 rounded-xl bg-white/30 shadow-xl text-sm font-semibold justify-between flex items-center flex-row">
+      <span
+        onPointerUp={() => onSelect(2)}
+        className="w-full flex justify-center flex-1 h-full flex-row gap-2 items-center cursor-pointer hover:bg-indigo-500/20 hover:rounded-l-xl"
       >
-        <CodingCard
-          link={LeetCode_Link}
-          profile={"LeetCode"}
-          codingData={leetCodeProfile}
-        >
-          <IconFc name={IconName.LEETCODE} width={20} height={20} />
-        </CodingCard>
-        <CodingCard
-          link={GFG_Link}
-          profile={"GeeksForGeeks"}
-          codingData={gfgProfile}
-        >
-          <IconFc name={IconName.GFG} width={24} height={24} />
-        </CodingCard>
-      </div>
+        <span className="bg-red-500 rounded-md w-5 h-5"></span>
+        <p>Hard</p>
+      </span>
+      <span
+        onPointerUp={() => onSelect(1)}
+        className="w-full flex justify-center flex-1 h-full flex-row gap-2 items-center cursor-pointer hover:bg-indigo-500/20"
+      >
+        <span className=" bg-orange-500 rounded-md w-5 h-5"></span>
+        <p>Medium</p>
+      </span>
+      <span
+        onPointerUp={() => onSelect(0)}
+        className="w-full flex justify-center flex-1 h-full flex-row gap-2 items-center cursor-pointer hover:bg-indigo-500/20"
+      >
+        <span className="bg-emerald-500 rounded-md w-5 h-5"></span>
+        <p>Easy</p>
+      </span>
+      <span
+        onPointerUp={() => onSelect(-1)}
+        className="mx-3 border-2 p-1 rounded-full cursor-pointer border-indigo-400"
+      >
+        <ResetIcon />
+      </span>
     </div>
   );
 };
@@ -186,31 +223,14 @@ const CodingLayout = ({ leetCodeProfile, gfgProfile }) => {
 const ProjectLayout = ({ projectList = [] }) => {
   const [currentProjectTopic, setCurrentProjectTopic] = useState(0);
   return (
-    <div className={`mb-4 w-full md:block`}>
-      <h1 className={"font-extrabold py-2 hidden md:block md:text-4xl"}>
-        Projects
+    <div className={`w-full lg:flex flex-col h-full`}>
+      <h1 className={"font-extrabold py-2 hidden lg:block md:text-6xl"}>
+        Projects.
       </h1>
-      <div
-        className={
-          "w-full flex flex-col gap-4 p-4 mt-4 h-[72dvh] sm:h-[80dvh] md:h-[40dvh] lg:h-[42dvh] xl:h-[48dvh] 3xl:h-[50dvh] overflow-auto backdrop-blur-sm backdrop-saturate-150 shadow-xl rounded-xl linearGradientReverse"
-        }
-      >
-        <span className={`flex flex-row justify-between items-center`}>
-          <TabLayout
-            handleClick={(index) => setCurrentProjectTopic(index)}
-            currentTopic={currentProjectTopic}
-            tabList={["Frontend", "Backend", "Design"]}
-          />
-        </span>
-        <div
-          className={
-            "grid h-full overflow-y-auto  overflow-x-hidden grid-cols-1 md:grid-cols-2 gap-4 px-2"
-          }
-        >
-          {projectList.map((project, index) => (
-            <ProjectItem key={index} prop={project} />
-          ))}
-        </div>
+      <div className="w-full h-[calc(100dvh_-_180px)] lg:h-[calc(100dvh_-_700px)] 3xl:h-[45dvh] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 linearGradientReverse shadow-xl rounded-xl p-4 my-container overflow-y-auto">
+        {projectList.map((project, index) => {
+          return <ProjectItem key={index} prop={project} />;
+        })}
       </div>
     </div>
   );

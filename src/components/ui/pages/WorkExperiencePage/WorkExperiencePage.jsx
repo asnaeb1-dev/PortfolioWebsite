@@ -5,38 +5,36 @@ import { WorkDetails, WorkExperience } from "../../../data/PersonalData";
 import MobileWorkExpCard from "../../uicomponents/WorkExPath/MobileWorkExpCard";
 import CompanyDetails from "../../uicomponents/WorkExPath/CompanyDetails";
 
+import "../../../../index.css";
+
 const WorkExperiencePage = () => {
   const [clickedWorkExperience, setClickedWorkExperience] = useState(-1);
 
-  useEffect(() => {
-    if (clickedWorkExperience === -1) return;
-    console.log(
-      "iwre",
-      clickedWorkExperience,
-      WorkDetails[clickedWorkExperience]
-    );
-  }, [clickedWorkExperience]);
-
   return (
-    <div className="h-[calc(100vh_-_60px)] overflow-hidden relative p-4 pl-0 flex flex-row lg:w-4/5 lg:mx-auto lg:pt-8">
-      <div className="flex flex-col justify-center flex-1">
-        <h1 className="font-extrabold text-3xl pb-2 pl-4 lg:text-4xl">
+    <div className="w-full flex flex-col items-center h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_100px)] lg:mt-8 overflow-hidden">
+      <div className="w-full lg:w-4/5  h-full hidden-scrollbar flex flex-col lg:mb-6 overflow-y-auto p-4  lg:bg-white/30 backdrop-blur-sm shadow-xl lg:rounded-2xl ">
+        <h1 className="font-extrabold text-3xl lg:text-4xl xl:text-5xl lg:px-2">
           Work Experience
         </h1>
-        <div className="w-full h-full pl-4 overflow-y-auto overflow-x-hidden">
-          <WorkExPath
-            workExperience={WorkExperience.workList}
-            onclick={(index) => setClickedWorkExperience(index)}
-          />
+        <div className="overflow-y-hidden h-full justify-center flex flex-row sm:gap-4 lg:gap-2 lg:p-2 ">
+          <div className="w-full md:w-1/2 lg:pl-4 h-full overflow-y-auto hidden-scrollbar overflow-x-hidden">
+            <WorkExPath
+              workExperience={WorkExperience.workList}
+              onclick={(index) => setClickedWorkExperience(index)}
+            />
+          </div>
+          <div className="hidden md:block w-full h-full absolute md:static md:w-1/2 shadow-lg rounded-xl linearGradientReverse">
+            {/* content */}
+            {
+              clickedWorkExperience !== -1 ?
+                <CompanyDetails
+                  companyDetails={WorkDetails[clickedWorkExperience]}
+                />:
+                <p className="w-full text-xl font-bold text-indigo-500 h-full flex justify-center items-center">Click on a company to know more</p>
+            }
+          </div>
         </div>
       </div>
-      <div className="flex-0 md:flex-1 bg-gradient-to-tr bg-grad h-[calc(100vh_-_140px)] rounded-xl"></div>
-      {clickedWorkExperience !== -1 && (
-        <CompanyDetails
-          handleClose={() => setClickedWorkExperience((val) => -1)}
-          companyDetails={WorkDetails[clickedWorkExperience]}
-        />
-      )}
     </div>
   );
 };

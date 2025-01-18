@@ -1,5 +1,5 @@
 .animateOffset {
-    animation: offsetAnim 1.05s ease infinite 0.1s forwards;
+    animation: offsetAnim 0.9s ease infinite 0.1s forwards;
 }
 
 @keyframes offsetAnim {

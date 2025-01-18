@@ -11,6 +11,7 @@ const WorkExPath = ({ workExperience = [], onclick }) => {
           return (
             <IndividualWorkExPath
               index={index}
+              key={index}
               begin={currentPosition === index}
               end={index === workExperience.length - 1}
               isDone={() => setCurrentPosition(currentPosition + 1)}
@@ -62,7 +63,7 @@ const IndividualWorkExPath = ({
           onTransitionEnd={() => (setTransitionCompleted(true), isDone())}
           className={`w-1 ${
             start ? "h-40 md:h-44 lg:h-52 xl:h-56" : "h-0"
-          } bg-indigo-500 rounded-full duration-[3000ms] transition-all`}
+          } bg-indigo-500 rounded-full duration-[1500ms] transition-all`}
         ></div>
       )}
       {details?.companyName && (

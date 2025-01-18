@@ -6,6 +6,7 @@ const CodingCard = ({
   children,
   profile = "Coding Profile",
   link = "/",
+  difficulty = -1,
 }) => {
   const easyQuestionSolved = Math.round(
     (codingData?.easySolved * 100) / codingData.totalSolved
@@ -32,9 +33,9 @@ const CodingCard = ({
 
   return (
     <div
-      className={`w-full h-[250px] shadow-lg flex flex-row bg-indigo-600/20 cursor-pointer rounded-3xl p-6 duration-500 transition-transform ${
+      className={`w-full h-[250px] lg:h-[300px] backdrop-blur-lg linearGradient shadow-lg flex flex-row  cursor-pointer rounded-3xl p-4 lg:p-6 duration-500 transition-transform ${
         profile === "LeetCode" ? "origin-left" : "origin-right"
-      } hover:scale-x-[102%]`}
+      }`}
     >
       {!codingData ||
       !codingData.totalSolved ||
@@ -104,7 +105,7 @@ const CodingCard = ({
               <p className={"font-bold text-indigo-500"}>{count}</p>
             </div>
             <div
-              className={`w-full text-indigo-500 h-full font-semibold relative flex flex-col gap-2 border-l-[1px] border-b-[1px] border-black/30`}
+              className={`w-full text-indigo-500 h-full font-semibold relative flex flex-col gap-2 border-l-[1.2px] border-b-[1.2px] border-black`}
             >
               <p className={"absolute bottom-[-24px] text-sm"}>0</p>
               <p
@@ -117,29 +118,57 @@ const CodingCard = ({
               <p className={"absolute bottom-[-24px] text-sm right-0"}>100</p>
               <div
                 title={`Easy: ${easyQuestionSolved}%`}
-                style={{ "--bar-width": `${easyQuestionSolved}%` }}
-                className={`mt-auto rounded-r-lg h-8 flex items-center justify-center bg-emerald-400 animateProjectStats`}
+                style={{
+                  "--bar-width": `${
+                    difficulty === -1 || difficulty === 0
+                      ? easyQuestionSolved
+                      : 0
+                  }%`,
+                }}
+                className={`mt-auto rounded-r-lg h-8 flex items-center justify-center  bg-emerald-400 animateProjectStats`}
               >
-                <p className={`text-sm text-black  relative lg:hidden`}>
+                <p
+                  className={`text-sm text-black  relative ${
+                    difficulty !== -1 && difficulty === 0 ? "block" : "hidden"
+                  }`}
+                >
                   {codingData.easySolved}
                 </p>
               </div>
               <div
                 title={`Medium: ${mediumQuestionSolved}%`}
-                style={{ "--bar-width": `${mediumQuestionSolved}%` }}
+                style={{
+                  "--bar-width": `${
+                    difficulty === -1 || difficulty === 1
+                      ? mediumQuestionSolved
+                      : 0
+                  }%`,
+                }}
                 className={`duration-500 flex justify-center items-center my-auto animateProjectStats transition-all w-0 delay-1000 rounded-r-lg h-8 bg-orange-400`}
               >
-                <p className={`text-sm text-black relative lg:hidden`}>
+                <p
+                  className={`text-sm text-black relative ${
+                    difficulty !== -1 && difficulty === 1 ? "block" : "hidden"
+                  }`}
+                >
                   {codingData.mediumSolved}
                 </p>
               </div>
               <div
                 title={`Hard: ${hardQuestionSolved}%`}
-                style={{ "--bar-width": `${hardQuestionSolved}%` }}
+                style={{
+                  "--bar-width": `${
+                    difficulty === -1 || difficulty === 2
+                      ? hardQuestionSolved
+                      : 0
+                  }%`,
+                }}
                 className={`duration-500 flex items-center justify-center mb-auto animateProjectStats transition-all w-0 delay-1000 rounded-r-lg h-8 bg-red-500`}
               >
                 <p
-                  className={`text-sm text-black relative left-[150%] lg:hidden`}
+                  className={`text-sm text-black ${
+                    difficulty !== -1 && difficulty === 2 ? "block" : "hidden"
+                  } relative left-[150%] `}
                 >
                   {codingData.hardSolved}
                 </p>

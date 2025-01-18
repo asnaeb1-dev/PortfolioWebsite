@@ -10,12 +10,13 @@ import DayNightSwitch from "../DayNightSwitch/DayNightSwitch";
 import "./navbar.css";
 import MobileMenu from "../MobileMenu/MobileMenu.jsx";
 import ColorSwitch from "../ColorSwitch/ColorSwitch.jsx";
-import useClickedOutside from "../../../data/CustomHooks/useClickedOutside/useClickedOutside.jsx";
+import useClickedOutside from "../../../data/CustomHooks/useClickedOutside.jsx";
+import { useTheme } from "../../../data/Context/ThemeContext.jsx";
 
 const Navbar = () => {
   const location = useLocation();
-  const [isDarkModeEnabled, setDarkModeEnabled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isDarkModeEnabled, toggleDarkMode } = useTheme();
   return (
     <div className=" relative z-10 bg-transparent lg:bg-white/30 lg:backdrop-blur-sm lg:backdrop-saturate-200 lg:shadow-xl px-4 py-2 lg:px-0 lg:rounded-full lg:translate-y-[20px] lg:m-auto h-16 lg:h-20 lg:w-4/5 flex flex-row justify-between lg:justify-around items-center">
       <div className=" font-extrabold flex flex-row items-center text-indigo-500 gap-3">
@@ -54,7 +55,7 @@ const Navbar = () => {
           >
             {NavBarStrings.PROJECTS}
           </Link>
-          <Link
+          {/* <Link
             to={Links.EDUCATION}
             className={`cursor-pointer transition-all underline_anim ${
               location.pathname !== Links.EDUCATION
@@ -63,7 +64,7 @@ const Navbar = () => {
             }`}
           >
             {NavBarStrings.EDUCATION}
-          </Link>
+          </Link> */}
           <Link
             to={Links.WORK_EXPERIENCE}
             className={`cursor-pointer transition-all  underline_anim ${
@@ -93,7 +94,7 @@ const Navbar = () => {
             <MobileMenu
               isDarkModeEnabled={isDarkModeEnabled}
               isMenuOpen={isMenuOpen}
-              toggleSwitch={() => setDarkModeEnabled(!isDarkModeEnabled)}
+              toggleSwitch={toggleDarkMode}
               clickedOutside={() => setIsMenuOpen(false)}
             />
           )}
@@ -102,7 +103,7 @@ const Navbar = () => {
       <div className={"hidden lg:flex flex-row items-center gap-2"}>
         <DayNightSwitch
           isEnabled={isDarkModeEnabled}
-          toggleSwitch={() => setDarkModeEnabled(!isDarkModeEnabled)}
+          toggleSwitch={toggleDarkMode}
         />
         {/* <ColorSwitch /> */}
       </div>
