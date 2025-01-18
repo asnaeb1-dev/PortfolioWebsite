@@ -2,6 +2,8 @@
 import SuperheroAppImage from "../assets/supehero.png";
 import TaskrAppIcon from "../assets/taskrapp.png";
 import ReactComponent from "../assets/components.png";
+import DSAIcon from "../assets/dsa.png";
+import SwiggyImage from "../assets/swiggy.png";
 import { IconName } from "./Icons";
 
 export const LeetCode_Link = `https://leetcode.com/u/abhigyanrahawork76/`;
@@ -228,104 +230,45 @@ export const Projects =  [
     githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
   },
   {
-    title: "React Components",
-    projectImage: ReactComponent,
-    description: "This is a React app that contains all the components that I have built for various projects and can be used.",
+    title: "DSA Practice",
+    projectImage: DSAIcon,
+    description: "This is a project where I solve and accumulate DSA questions.",
     link: "",
     iconName: IconName.HTML5,
     techStack: [{
-      skillName: "React",
-      iconName: IconName.REACT,
-    },{
-      skillName: "HTML",
-      iconName: IconName.HTML5,
-    },{
-      skillName: "CSS",
-      iconName: IconName.CSS3,
+      skillName: "Java",
+      iconName: IconName.JAVA,
     }, {
       skillName: "JavaScript",
       iconName: IconName.JAVASCRIPT,
-    }, {
-      skillName: "TypeScript",
-      iconName: IconName.TYPESCRIPT,
     }
     ],
-    githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
+    githubLink: `https://github.com/asnaeb1-dev/CodingPractice`
   },
   {
-    title: "React Components",
-    projectImage: ReactComponent,
-    description: "This is a React app that contains all the components that I have built for various projects and can be used.",
+    title: "Swiggy Clone",
+    projectImage: SwiggyImage,
+    description: "This is a project where I solve and accumulate DSA questions.",
     link: "",
     iconName: IconName.HTML5,
     techStack: [{
       skillName: "React",
       iconName: IconName.REACT,
-    },{
-      skillName: "HTML",
-      iconName: IconName.HTML5,
-    },{
-      skillName: "CSS",
-      iconName: IconName.CSS3,
     }, {
       skillName: "JavaScript",
       iconName: IconName.JAVASCRIPT,
     }, {
       skillName: "TypeScript",
       iconName: IconName.TYPESCRIPT,
-    }
-    ],
-    githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
-  },
-  {
-    title: "React Components",
-    projectImage: ReactComponent,
-    description: "This is a React app that contains all the components that I have built for various projects and can be used.",
-    link: "",
-    iconName: IconName.HTML5,
-    techStack: [{
-      skillName: "React",
-      iconName: IconName.REACT,
-    },{
-      skillName: "HTML",
-      iconName: IconName.HTML5,
-    },{
-      skillName: "CSS",
-      iconName: IconName.CSS3,
+    }, {
+      skillName: "Redux",
+      iconName: IconName.REDUX,
     }, {
       skillName: "JavaScript",
       iconName: IconName.JAVASCRIPT,
-    }, {
-      skillName: "TypeScript",
-      iconName: IconName.TYPESCRIPT,
     }
     ],
-    githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
-  },
-  {
-    title: "React Components",
-    projectImage: ReactComponent,
-    description: "This is a React app that contains all the components that I have built for various projects and can be used.",
-    link: "",
-    iconName: IconName.HTML5,
-    techStack: [{
-      skillName: "React",
-      iconName: IconName.REACT,
-    },{
-      skillName: "HTML",
-      iconName: IconName.HTML5,
-    },{
-      skillName: "CSS",
-      iconName: IconName.CSS3,
-    }, {
-      skillName: "JavaScript",
-      iconName: IconName.JAVASCRIPT,
-    }, {
-      skillName: "TypeScript",
-      iconName: IconName.TYPESCRIPT,
-    }
-    ],
-    githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
+    githubLink: `https://github.com/asnaeb1-dev/SwiggyClone`
   }
 ]
 export const WorkExperience = {

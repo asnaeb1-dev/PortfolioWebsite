@@ -227,9 +227,9 @@ const ProjectLayout = ({ projectList = [] }) => {
       <h1 className={"font-extrabold py-2 hidden lg:block md:text-6xl"}>
         Projects.
       </h1>
-      <div className="w-full h-full linearGradientReverse shadow-xl rounded-xl p-4">
-        {projectList.map((project) => {
-          return <></>;
+      <div className="w-full h-[calc(100dvh_-_180px)] lg:h-[calc(100dvh_-_700px)] 3xl:h-[45dvh] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 linearGradientReverse shadow-xl rounded-xl p-4 my-container overflow-y-auto">
+        {projectList.map((project, index) => {
+          return <ProjectItem key={index} prop={project} />;
         })}
       </div>
     </div>

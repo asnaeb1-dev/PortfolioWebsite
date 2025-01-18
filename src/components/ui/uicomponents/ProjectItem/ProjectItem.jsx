@@ -12,7 +12,7 @@ const ProjectItem = ({ prop }) => {
   return (
     <div
       className={
-        "w-full h-[300px] min-h-[300px] xl:h-[400px] bg-cover rounded-2xl relative bg-center cursor-pointer"
+        "w-full h-[250px] min-h-[250px] 3xl:h-[400px]  bg-cover rounded-2xl relative bg-center cursor-pointer"
       }
     >
       <img

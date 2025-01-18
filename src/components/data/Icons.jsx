@@ -817,6 +817,7 @@ export const IconFc = ({ name = "", width, height }) => {
       return <IntelliJIcon width={width} height={height} />;
     case IconName.VITE:
       return <ViteIconFC width={width} height={height} />;
+    case "javascript":
     case IconName.JAVASCRIPT:
       return <JavaScriptIconFC width={width} height={height} />;
     case IconName.REACT_QUERY:

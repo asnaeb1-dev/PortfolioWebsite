@@ -8,8 +8,6 @@ const CodingCard = ({
   link = "/",
   difficulty = -1,
 }) => {
-  console.log("diff", difficulty);
-
   const easyQuestionSolved = Math.round(
     (codingData?.easySolved * 100) / codingData.totalSolved
   );
