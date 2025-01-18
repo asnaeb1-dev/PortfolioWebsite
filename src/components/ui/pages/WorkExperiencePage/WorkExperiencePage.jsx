@@ -23,15 +23,17 @@ const WorkExperiencePage = () => {
               onclick={(index) => setClickedWorkExperience(index)}
             />
           </div>
-          <div className="hidden md:block w-full h-full absolute md:static md:w-1/2 shadow-lg rounded-xl linearGradientReverse">
+          <div className="hidden  w-full h-full absolute md:static md:w-1/2 shadow-lg rounded-xl linearGradientReverse">
             {/* content */}
-            {
-              clickedWorkExperience !== -1 ?
-                <CompanyDetails
-                  companyDetails={WorkDetails[clickedWorkExperience]}
-                />:
-                <p className="w-full text-xl font-bold text-indigo-500 h-full flex justify-center items-center">Click on a company to know more</p>
-            }
+            {clickedWorkExperience !== -1 ? (
+              <CompanyDetails
+                companyDetails={WorkDetails[clickedWorkExperience]}
+              />
+            ) : (
+              <p className="w-full text-xl font-bold text-indigo-500 h-full flex justify-center items-center">
+                Click on a company to know more
+              </p>
+            )}
           </div>
         </div>
       </div>

@@ -100,7 +100,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
-      <div className={"hidden lg:flex flex-row items-center gap-2"}>
+      <div className={"hidden flex-row items-center gap-2"}>
         <DayNightSwitch
           isEnabled={isDarkModeEnabled}
           toggleSwitch={toggleDarkMode}
