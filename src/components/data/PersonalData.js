@@ -205,6 +205,22 @@ export const Projects =  [
     githubLink: `https://github.com/asnaeb1-dev/TaskManager`
   },
   {
+    title: "DSA Practice",
+    projectImage: DSAIcon,
+    description: "This is a project where I solve and accumulate DSA questions.",
+    link: "",
+    iconName: IconName.HTML5,
+    techStack: [{
+      skillName: "Java",
+      iconName: IconName.JAVA,
+    }, {
+      skillName: "JavaScript",
+      iconName: IconName.JAVASCRIPT,
+    }
+    ],
+    githubLink: `https://github.com/asnaeb1-dev/CodingPractice`
+  },
+  {
     title: "React Components",
     projectImage: ReactComponent,
     description: "This is a React app that contains all the components that I have built for various projects and can be used.",
@@ -228,22 +244,6 @@ export const Projects =  [
     }
     ],
     githubLink: `https://github.com/asnaeb1-dev/MachineCoding`
-  },
-  {
-    title: "DSA Practice",
-    projectImage: DSAIcon,
-    description: "This is a project where I solve and accumulate DSA questions.",
-    link: "",
-    iconName: IconName.HTML5,
-    techStack: [{
-      skillName: "Java",
-      iconName: IconName.JAVA,
-    }, {
-      skillName: "JavaScript",
-      iconName: IconName.JAVASCRIPT,
-    }
-    ],
-    githubLink: `https://github.com/asnaeb1-dev/CodingPractice`
   },
   {
     title: "Swiggy Clone",
