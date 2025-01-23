@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
 
 import IntroductionPage from '../IntroductionPage/IntroductionPage';
 import Page404 from '../404Page/Page404';
@@ -13,7 +13,7 @@ import ResumePage from '../ResumePage/ResumePage';
 
 const Router = () => {
 
-    const browserRouter = createBrowserRouter([
+    const hashRouter = createHashRouter([
         {
             path: "/",
             element: <App />,
@@ -28,7 +28,6 @@ const Router = () => {
             ]
         }
     ]);
-    return <RouterProvider router={browserRouter} />
+    return <RouterProvider router={hashRouter} />
 }
-
 export default Router
