@@ -1,8 +1,39 @@
-# React + Vite
+🚀 About Me
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I specialize in building scalable and high-performance web applications using React.js, Redux, JavaScript, and modern frontend technologies. With over 5 years of experience, I have worked on various projects, including gaming, media streaming, and enterprise solutions.
 
-Currently, two official plugins are available:
+📌 Portfolio Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Check out my portfolio here: abhigyanraha.me
+
+🛠️ Tech Stack
+
+Frontend: React.js, Next.js, Redux, JavaScript, TypeScript
+
+Styling: Tailwind CSS, Styled Components, SCSS
+
+Build Tools: Webpack, Vite
+
+Testing: Jest, React Testing Library
+
+Other: Git, CI/CD, Agile Methodologies
+
+📂 Featured Projects
+
+RedFM Web App - A React-based media streaming platform.
+
+National Storages Portal - An admin dashboard & mobile app for storage management.
+
+Taskr - A task manager with notifications.
+
+Casino Games - Built interactive Blackjack, Bet Behind Pro, and more.
+
+📫 Contact
+
+Email: [Your Email Here]
+
+LinkedIn: [Your LinkedIn Profile]
+
+GitHub: [Your GitHub Profile]
+
+Feel free to explore my portfolio and reach out for collaborations!
