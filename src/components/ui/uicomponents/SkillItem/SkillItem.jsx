@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./skillitem.css";
 
 const SkillItem = ({ children, progress = 0, skillTitle = "" }) => {
@@ -17,10 +17,12 @@ const SkillItem = ({ children, progress = 0, skillTitle = "" }) => {
       <div>{children}</div>
       <div className="flex flex-col w-full gap-1">
         <div className="flex flex-row w-full justify-between text-sm">
-          <p className="font-semibold">{skillTitle}</p>
-          <p className="scale-up font-semibold text-indigo-500">{count}%</p>
+          <p className="font-bold dark:text-white">{skillTitle}</p>
+          <p className="scale-up font-semibold text-indigo-500 dark:text-white">
+            {count}%
+          </p>
         </div>
-        <div className="w-full h-2 bg-slate-300 rounded-full">
+        <div className="w-full h-2 bg-slate-300 dark:bg-white rounded-full">
           <div
             style={{
               width: `${count}%`,

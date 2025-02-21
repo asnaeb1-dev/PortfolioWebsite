@@ -29,9 +29,11 @@ const ResumePage = () => {
         "w-full flex flex-col items-center justify-center h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_100px)] lg:mt-8 overflow-hidden"
       }
     >
-      <div className="w-full lg:w-4/5 h-full flex flex-col gap-5 lg:mb-6 p-4 lg:p-6 lg:bg-white/30 backdrop-blur-sm shadow-xl lg:rounded-2xl">
+      <div className="w-full lg:w-4/5 h-full flex flex-col gap-5 lg:mb-6 p-4 lg:p-6 lg:bg-white/30 lg:dark:bg-transparent backdrop-blur-sm shadow-xl lg:rounded-2xl">
         <div className="flex flex-row w-full justify-between items-center">
-          <h1 className="text-4xl lg:text-5xl font-extrabold">Resume</h1>
+          <h1 className="text-4xl lg:text-5xl font-extrabold dark:text-white">
+            Resume
+          </h1>
           <DownloadButton downloadLink={DownloadLink} />
         </div>
         <iframe
@@ -40,7 +42,7 @@ const ResumePage = () => {
           onError={(e) => setError(e)}
           onLoad={() => setLoading(false)}
           src={ResumeLink}
-          className={`w-full h-full transition-opacity rounded-2xl duration-700`}
+          className={`w-full h-full transition-opacity dark:bg-white rounded-2xl duration-700`}
         ></iframe>
         <div
           className={`absolute ${

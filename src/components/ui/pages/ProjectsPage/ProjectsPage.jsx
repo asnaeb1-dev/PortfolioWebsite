@@ -92,7 +92,7 @@ const ProjectsPage = () => {
         "w-full flex flex-col items-center justify-center h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_100px)] mt-4 lg:mt-8 overflow-hidden"
       }
     >
-      <div className="w-full lg:w-4/5 h-full lg:mb-6  lg:bg-white/30 backdrop-blur-sm shadow-xl lg:rounded-2xl">
+      <div className="w-full lg:w-4/5 h-full lg:mb-6 bg-transparent lg:bg-white/30 backdrop-blur-sm shadow-xl lg:rounded-2xl">
         <div className="w-full lg:hidden px-4">
           <TabLayout
             currentTopic={currentTab}
@@ -100,7 +100,7 @@ const ProjectsPage = () => {
             tabList={["Coding", "Projects"]}
           />
         </div>
-        <div className="md:flex flex-col bg-white/30 mt-3 lg:mt-0 shadow-lg w-full h-full p-4 rounded-xl ">
+        <div className="md:flex flex-col bg-white/30 dark:bg-transparent mt-3 lg:mt-0 shadow-lg w-full h-full p-4 rounded-xl ">
           {/* Mobile layout */}
           <span
             className={`${currentTab === 0 ? "block lg:hidden" : "hidden"}`}

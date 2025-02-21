@@ -13,11 +13,11 @@ const WorkExperiencePage = () => {
   return (
     <div className="w-full flex flex-col items-center h-[calc(100vh_-_60px)] lg:h-[calc(100vh_-_100px)] lg:mt-8 overflow-hidden">
       <div className="w-full lg:w-4/5  h-full hidden-scrollbar flex flex-col lg:mb-6 overflow-y-auto p-4  lg:bg-white/30 backdrop-blur-sm shadow-xl lg:rounded-2xl ">
-        <h1 className="font-extrabold text-3xl lg:text-4xl xl:text-5xl lg:px-2">
+        <h1 className="font-extrabold text-3xl lg:text-4xl xl:text-5xl lg:px-2 dark:text-white">
           Work Experience
         </h1>
         <div className="overflow-y-hidden h-full justify-center flex flex-row sm:gap-4 lg:gap-2 lg:p-2 ">
-          <div className="w-full md:w-1/2 lg:pl-4 h-full overflow-y-auto hidden-scrollbar overflow-x-hidden">
+          <div className="w-full md:w-1/2 pl-2 lg:pl-4 h-full overflow-y-auto hidden-scrollbar overflow-x-hidden">
             <WorkExPath
               workExperience={WorkExperience.workList}
               onclick={(index) => setClickedWorkExperience(index)}

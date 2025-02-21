@@ -75,7 +75,7 @@ const IndividualWorkExPath = ({
         />
       )}
       <span
-        className={`absolute w-[100dvh] text-sm lg:text-lg h-0 font-bold opacity-0 top-2.5 lg:top-1.5 left-[200%] ${
+        className={`absolute w-[100dvh] dark:text-white text-sm lg:text-lg h-0 font-bold opacity-0 top-2.5 lg:top-1.5 left-[200%] ${
           start && "opacity-100"
         } `}
       >

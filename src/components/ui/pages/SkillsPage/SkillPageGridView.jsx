@@ -19,7 +19,7 @@ const SkillCategory = ({ skillType = "", skills = [] }) => {
   return (
     <div className="gap-3 flex flex-col">
       <span className="flex flex-row justify-between items-center">
-        <h1 className=" font-bold text-lg xl:text-2xl text-start overflow-hidden text-ellipsis whitespace-nowrap">
+        <h1 className=" font-bold text-lg xl:text-2xl text-start overflow-hidden text-ellipsis whitespace-nowrap dark:text-indigo-500">
           {skillType}
         </h1>
         <span

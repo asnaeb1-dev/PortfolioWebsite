@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   MdNavigateBefore as PreviousIcon,
   MdNavigateNext as NextIcon,
@@ -7,24 +7,30 @@ import { RxCross1 as CrossIcon } from "react-icons/rx";
 import ProjectCard from "./ProjectCard.jsx";
 import SmallSkillItem from "../SmallSkillItem/SmallSkillItem.jsx";
 
+import useSwipe from "../../../data/CustomHooks/useSwipe.jsx";
+
 // eslint-disable-next-line react/prop-types
 const CompanyDetails = ({ companyDetails = {}, handleClose }) => {
+  const swipeRef = useRef();
+  const swipeDirection = useSwipe(swipeRef);
   const [currentProject, setCurrentProject] = useState(0);
   useLayoutEffect(() => {
     setCurrentProject(0);
   }, [companyDetails]);
 
+  useEffect(() => {
+    console.log(swipeDirection);
+  }, [swipeDirection]);
+
   return (
-    <div
-      className={`w-full h-full rounded-t-lg bg-white overflow-hidden`}
-    >
+    <div className={`w-full h-full rounded-t-lg bg-white overflow-hidden`}>
       <div className="flex w-full h-full flex-col overflow-hidden linearGradientReverse gap-3 xl:gap-5 md:rounded-lg rounded-t-lg p-4">
         <div className="w-full flex-row flex items-center justify-between gap-5">
           <p className="font-extrabold text-3xl xl:text-4xl text-indigo-500 overflow-hidden whitespace-nowrap text-ellipsis">
             {companyDetails.companyName}
           </p>
           <span
-            onPointerUp={() => {}}
+            onPointerUp={handleClose}
             className="p-[7px] border-[1.5px] rounded-full border-indigo-500 hover:scale-105 active:scale-95 transition-transform lg:hidden"
           >
             <CrossIcon color=" rgb(99 102 241)" />
@@ -55,10 +61,13 @@ const CompanyDetails = ({ companyDetails = {}, handleClose }) => {
             {companyDetails.description}
           </p>
         </div>
-        <div className="w-full h-full bg-indigo-400/50 rounded-lg p-2 flex gap-2 flex-col">
-          <h1 className="font-bold text-2xl">Projects</h1>
-          <div className="w-full h-full bg-red-300">
-
+        <div className="w-full h-full bg-indigo-400/50 rounded-lg p-2 3xl:p-4 flex gap-2 flex-col">
+          <h1 className="font-bold text-2xl 3xl:text-4xl">Projects</h1>
+          <div
+            ref={swipeRef}
+            className="w-full h-full bg-white/20 rounded-2xl"
+          >
+            
           </div>
         </div>
       </div>

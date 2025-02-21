@@ -8,17 +8,16 @@ export const ThemeProvider = ({ children }) => {
   const [isDarkModeEnabled, setDarkModeEnabled] = useState(false);
 
   useEffect(() => {
+    const html = document.documentElement;
     if (isDarkModeEnabled) {
-      localStorage.setItem("theme", "dark");
+      html.classList.toggle("dark");
     } else {
-      localStorage.setItem("theme", "light");
+      html.classList.remove("dark");
     }
   }, [isDarkModeEnabled]);
 
-  const toggleDarkMode = () => setDarkModeEnabled((prev) => !prev);
-
   return (
-    <ThemeContext.Provider value={{ isDarkModeEnabled, toggleDarkMode }}>
+    <ThemeContext.Provider value={{ isDarkModeEnabled, setDarkModeEnabled }}>
       {children}
     </ThemeContext.Provider>
   );

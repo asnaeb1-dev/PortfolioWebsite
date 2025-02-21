@@ -4,30 +4,21 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 import { useTheme } from "../../../data/Context/ThemeContext";
+import { darkModeColors, lightModeColors } from "../../../data/theme";
 const BackgroundParticles = () => {
   const [init, setInit] = useState(false);
   const { isDarkModeEnabled } = useTheme();
-  const [styles, setStyles] = useState({
-    blobColor: "rgb(99, 102, 241)",
-    lineColor: "rgb(99, 102, 241)",
-    bgColor: "rgb(255, 255, 255)",
-  });
-  useEffect(() => {
-    if (isDarkModeEnabled) {
-      setStyles({
-        blobColor: "rgb(150, 120, 255)",
-        lineColor: "rgb(150, 120, 255)",
-        bgColor: "#1a1a1a",
-      });
-    } else {
-      setStyles({
-        blobColor: "rgb(99, 102, 241)",
-        lineColor: "rgb(99, 102, 241)",
-        bgColor: "rgb(255, 255, 255)",
-      });
-    }
-  }, [isDarkModeEnabled]);
 
+  const blobOpacity = isDarkModeEnabled ? 0.8 : 0.5;
+  const bgColor = isDarkModeEnabled
+    ? darkModeColors.mainBackgroundColor
+    : lightModeColors.mainBackgroundColor;
+  const blobColor = isDarkModeEnabled
+    ? darkModeColors.blobColor
+    : lightModeColors.blobColor;
+  const connectorColor = isDarkModeEnabled
+    ? darkModeColors.blobConnectorColor
+    : lightModeColors.blobConnectorColor;
   // this should be run only once per application lifetime
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -41,7 +32,7 @@ const BackgroundParticles = () => {
     }).then(() => {
       setInit(true);
     });
-  }, [isDarkModeEnabled]);
+  }, []);
 
   const particlesLoaded = (container) => {
     console.log(container);
@@ -50,7 +41,7 @@ const BackgroundParticles = () => {
   const options = useMemo(
     () => ({
       background: {
-        color: `${styles.bgColor}`,
+        color: `${bgColor}`,
         position: "50% 50%",
         repeat: "no-repeat",
         size: "cover",
@@ -79,13 +70,13 @@ const BackgroundParticles = () => {
       },
       particles: {
         color: {
-          value: `${styles.blobColor}`,
+          value: `${blobColor}`,
         },
         links: {
-          color: `${styles.lineColor}`,
+          color: `${connectorColor}`,
           distance: 150,
           enable: true,
-          opacity: 0.5,
+          opacity: blobOpacity,
           width: 1,
         },
         move: {
@@ -116,7 +107,7 @@ const BackgroundParticles = () => {
       },
       detectRetina: true,
     }),
-    []
+    [isDarkModeEnabled]
   );
 
   if (init) {

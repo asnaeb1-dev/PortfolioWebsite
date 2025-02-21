@@ -33,7 +33,7 @@ const CodingCard = ({
 
   return (
     <div
-      className={`w-full h-[250px] lg:h-[300px] backdrop-blur-lg linearGradient shadow-lg flex flex-row  cursor-pointer rounded-3xl p-4 lg:p-6 duration-500 transition-transform ${
+      className={`w-full h-[250px] lg:h-[300px] backdrop-blur-lg linearGradient dark:border dark:border-indigo-500 shadow-lg flex flex-row  cursor-pointer rounded-3xl p-4 lg:p-6 duration-500 transition-transform ${
         profile === "LeetCode" ? "origin-left" : "origin-right"
       }`}
     >
@@ -97,7 +97,7 @@ const CodingCard = ({
                   href={link}
                   rel="noopener noreferrer"
                   target="_blank"
-                  className=" text-md font-bold text-ellipsis transition-all hover:text-indigo-500 hover:underline hover:underline-offset-4 overflow-hidden whitespace-nowrap"
+                  className=" text-md font-bold text-ellipsis dark:text-white transition-all hover:text-indigo-500 hover:underline hover:underline-offset-4 overflow-hidden whitespace-nowrap"
                 >
                   {profile}
                 </a>
@@ -105,7 +105,7 @@ const CodingCard = ({
               <p className={"font-bold text-indigo-500"}>{count}</p>
             </div>
             <div
-              className={`w-full text-indigo-500 h-full font-semibold relative flex flex-col gap-2 border-l-[1.2px] border-b-[1.2px] border-black`}
+              className={`w-full text-indigo-500 h-full font-semibold relative flex flex-col gap-2 border-l-[1.2px] border-b-[1.2px] border-black dark:border-indigo-500`}
             >
               <p className={"absolute bottom-[-24px] text-sm"}>0</p>
               <p
