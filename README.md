@@ -1,10 +1,10 @@
 🚀 About Me
 
-I specialize in building scalable and high-performance web applications using React.js, Redux, JavaScript, and modern frontend technologies. With over 5 years of experience, I have worked on various projects, including gaming, media streaming, and enterprise solutions.
+I build scalable, high-performance web applications using React.js, Redux, JavaScript, and modern frontend technologies. With over 5 years of experience, I have worked on various projects, including gaming, media streaming, and enterprise solutions.
 
 📌 Portfolio Website
 
-Check out my portfolio here: abhigyanraha.me
+Check out my portfolio here: https://www.abhigyanraha.me/
 
 🛠️ Tech Stack
 
