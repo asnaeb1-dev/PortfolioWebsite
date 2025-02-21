@@ -4,7 +4,7 @@ export const NavBarStrings = {
     PROJECTS: "Projects",
     EDUCATION: "Education",
     RESUME: "Resume",
-    WORK_EXPERIENCE: "Work Experience",
+    WORK_EXPERIENCE: "Work",
 };
 
 export const API_LINKS = "https://alfa-leetcode-api.onrender.com/";

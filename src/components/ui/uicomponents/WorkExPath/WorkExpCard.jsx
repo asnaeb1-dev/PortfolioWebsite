@@ -19,10 +19,12 @@ const WorkExpCard = ({ workDetails = {}, index = 0, start, onclick }) => {
               <FaMouse color={"white"} />
             </span>
           </span>
-          <p className="text-[12px] lg:text-sm font-semibold">
+          <p className="text-[12px] lg:text-sm font-semibold dark:text-white">
             {workDetails.designation}
           </p>
-          <p className="text-[10px] font-semibold">{workDetails.duration}</p>
+          <p className="text-[10px] font-semibold dark:text-white">
+            {workDetails.duration}
+          </p>
         </div>
       </div>
     </div>

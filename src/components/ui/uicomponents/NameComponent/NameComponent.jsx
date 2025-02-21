@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react';
+import { useEffect, useState } from "react";
 import "./NameComponent.css";
 
 const NameComponent = ({ nameText = "" }) => {
@@ -20,7 +20,9 @@ const NameComponent = ({ nameText = "" }) => {
         <span
           key={index}
           className={`transition-all duration-500 ease-in-out ${
-            index === currentIndex ? "-translate-y-2.5 scale-110 text-indigo-500" : ""
+            index === currentIndex
+              ? "-translate-y-2.5 scale-110 text-indigo-500"
+              : "dark:text-white"
           }`}
         >
           {nameChar}

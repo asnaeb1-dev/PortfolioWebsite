@@ -28,7 +28,9 @@ function MobileMenu({
         className={`w-full flex flex-col h-full gap-5 linearGradientReverse p-2 rounded-lg border-2 border-indigo-500/40`}
       >
         <span className={`flex flex-row justify-between items-center text-sm`}>
-          <p className={`text-indigo-500 font-bold`}>Dark Mode</p>
+          <p className={`text-indigo-500 font-bold dark:text-white`}>
+            Dark Mode
+          </p>
           <DayNightSwitch
             isEnabled={isDarkModeEnabled}
             toggleSwitch={toggleSwitch}
@@ -40,7 +42,7 @@ function MobileMenu({
             className={`cursor-pointer transition-transform ${
               location.pathname === Links.INTRO
                 ? "-translate-x-4 text-indigo-500 font-bold"
-                : "translate-x-0"
+                : "translate-x-0 dark:text-white"
             }`}
           >
             {NavBarStrings.INTRO}
@@ -50,7 +52,7 @@ function MobileMenu({
             className={`cursor-pointer transition-transform ${
               location.pathname === Links.SKILLS
                 ? "-translate-x-4 text-indigo-500 font-bold"
-                : "translate-x-0"
+                : "translate-x-0 dark:text-white"
             } `}
           >
             {NavBarStrings.SKILLS}
@@ -60,7 +62,7 @@ function MobileMenu({
             className={`cursor-pointer transition-transform ${
               location.pathname === Links.PROJECTS
                 ? "-translate-x-4 text-indigo-500 font-bold"
-                : "translate-x-0"
+                : "translate-x-0 dark:text-white"
             } `}
           >
             {NavBarStrings.PROJECTS}
@@ -80,7 +82,7 @@ function MobileMenu({
             className={`cursor-pointer transition-transform ${
               location.pathname === Links.WORK_EXPERIENCE
                 ? "-translate-x-4 text-indigo-500 font-bold"
-                : "translate-x-0"
+                : "translate-x-0 dark:text-white"
             } `}
           >
             {NavBarStrings.WORK_EXPERIENCE}
@@ -90,7 +92,7 @@ function MobileMenu({
             className={`cursor-pointer transition-transform ${
               location.pathname === Links.RESUME
                 ? "-translate-x-4 text-indigo-500 font-bold"
-                : "translate-x-0"
+                : "translate-x-0 dark:text-white"
             } `}
           >
             {NavBarStrings.RESUME}
