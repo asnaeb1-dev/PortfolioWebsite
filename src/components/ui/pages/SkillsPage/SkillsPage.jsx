@@ -15,7 +15,7 @@ const SkillsPage = () => {
     <div className="w-full flex flex-col h-[calc(100dvh_-_60px)] lg:h-[calc(100dvh_-_80px)] overflow-hidden">
       <div className="w-full h-full lg:pt-6 flex flex-col items-center">
         <div className="xsm:text-[30px] p-4 lg:px-4 w-full lg:w-4/5 sm:text-[40px] font-extrabold flex flex-row justify-between items-center">
-          <p className="w-full text-md">Skills</p>
+          <p className="w-full text-6xl">Skills.</p>
           <GridSwitch
             isGridView={isGridView}
             handleGridClick={() => setGridView(true)}

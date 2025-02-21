@@ -1,24 +1,23 @@
 .underline_anim {
-    position: relative;
-    display: inline-block;
-    color: #000;
-    text-decoration: none; /* Remove default underline */
+  position: relative;
+  display: inline-block;
+  text-decoration: none; /* Remove default underline */
 }
 
 .underline_anim::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 100%;
-    height: 2px; /* Adjust thickness */
-    background: rgb(79, 70, 229); /* Color of underline */
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.8s ease; /* Animation duration */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px; /* Adjust thickness */
+  background: rgb(79, 70, 229); /* Color of underline */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.8s ease; /* Animation duration */
 }
 
 .underline_anim:hover::after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

@@ -7,21 +7,26 @@ import { Link, useLocation } from "react-router-dom";
 import ProfilePicture from "../../../assets/me.jpg";
 import DayNightSwitch from "../DayNightSwitch/DayNightSwitch";
 
-import "./navbar.css";
 import MobileMenu from "../MobileMenu/MobileMenu.jsx";
-import ColorSwitch from "../ColorSwitch/ColorSwitch.jsx";
 import useClickedOutside from "../../../data/CustomHooks/useClickedOutside.jsx";
 import { useTheme } from "../../../data/Context/ThemeContext.jsx";
+
+import "./navbar.css";
 
 const Navbar = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isDarkModeEnabled, toggleDarkMode } = useTheme();
+  const { isDarkModeEnabled, setDarkModeEnabled } = useTheme();
+
   return (
-    <div className=" relative z-10 bg-transparent lg:bg-white/30 lg:backdrop-blur-sm lg:backdrop-saturate-200 lg:shadow-xl px-4 py-2 lg:px-0 lg:rounded-full lg:translate-y-[20px] lg:m-auto h-16 lg:h-20 lg:w-4/5 flex flex-row justify-between lg:justify-around items-center">
-      <div className=" font-extrabold flex flex-row items-center text-indigo-500 gap-3">
+    <div
+      className={`relative z-10 bg-transparent lg:backdrop-blur-sm lg:backdrop-saturate-200 lg:shadow-xl px-4 py-2 lg:px-0 lg:rounded-full lg:translate-y-[20px] lg:m-auto h-16 lg:h-20 lg:w-4/5 flex flex-row justify-between lg:justify-around items-center`}
+    >
+      <div className={`font-extrabold flex flex-row items-center gap-3`}>
         <ProfilePictureImage />
-        <p className="hidden md:block lg:hidden xl:block">Abhigyan Raha</p>
+        <p className={`hidden md:block text-indigo-500 lg:hidden xl:block`}>
+          Abhigyan Raha
+        </p>
       </div>
       <div>
         <ul className="hidden relative lg:text-md xl:text-lg lg:flex flex-row gap-7 font-bold">
@@ -86,24 +91,29 @@ const Navbar = () => {
             {NavBarStrings.RESUME}
           </Link>
         </ul>
-        <div className="cursor-pointer relative lg:hidden border-2 border-transparent p-1 rounded-full hover:bg-indigo-500/20 ">
+        <div
+          className={`cursor-pointer relative lg:hidden border-2 border-transparent p-1 rounded-full hover:bg-indigo-500/20`}
+        >
           <span onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <HamburgerMenuIcon size={25} />
+            <HamburgerMenuIcon
+              size={25}
+              color={`${isDarkModeEnabled ? "#fff" : "rgb(99 102 241)"}`}
+            />
           </span>
           {isMenuOpen && (
             <MobileMenu
               isDarkModeEnabled={isDarkModeEnabled}
               isMenuOpen={isMenuOpen}
-              toggleSwitch={toggleDarkMode}
+              toggleSwitch={() => setDarkModeEnabled(!isDarkModeEnabled)}
               clickedOutside={() => setIsMenuOpen(false)}
             />
           )}
         </div>
       </div>
-      <div className={"hidden flex-row items-center gap-2"}>
+      <div className={"hidden lg:block flex-row items-center gap-2"}>
         <DayNightSwitch
           isEnabled={isDarkModeEnabled}
-          toggleSwitch={toggleDarkMode}
+          toggleSwitch={() => setDarkModeEnabled(!isDarkModeEnabled)}
         />
         {/* <ColorSwitch /> */}
       </div>
@@ -123,9 +133,8 @@ const ProfilePictureImage = () => {
   }, [isClickedOutside]);
 
   return (
-    <div className="relative z-20">
+    <div ref={profileImageRef} className="relative z-20">
       <img
-        ref={profileImageRef}
         alt={"My Avatar"}
         src={ProfilePicture}
         width={40}
@@ -136,11 +145,14 @@ const ProfilePictureImage = () => {
         } aspect-square rounded-full cursor-pointer hover:scale-110 transition-transform`}
       />
       {isProfileOpen && (
-        <div className="absolute w-36 h-36 xl:w-52 xl:h-52 bg-black/40 z-20 top-12 rounded-full rounded-tl-none p-2">
+        <div
+          onPointerUp={(e) => e.stopPropagation()}
+          className="absolute w-36 h-36 xl:w-52 hover:scale-[101%] cursor-pointer transition-transform xl:h-52 bg-black/40 z-20 top-12 rounded-full rounded-tl-none p-2"
+        >
           <img
             alt={"My Avatar"}
             src={ProfilePicture}
-            className="object-cover bg-white aspect-square rounded-full w-full h-full"
+            className="object-cover bg-white aspect-square rounded-full rounded-tl-none w-full h-full"
           />
         </div>
       )}
