@@ -28,12 +28,4 @@ Taskr - A task manager with notifications.
 
 Casino Games - Built interactive Blackjack, Bet Behind Pro, and more.
 
-📫 Contact
-
-Email: [Your Email Here]
-
-LinkedIn: [Your LinkedIn Profile]
-
-GitHub: [Your GitHub Profile]
-
 Feel free to explore my portfolio and reach out for collaborations!
